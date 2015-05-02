@@ -5,11 +5,7 @@ var path = require('path');
 //var data = {};
 
 http.createServer(function(request, response) {
-	var xml = loadDB(); // change to "eval html"
-	// response.writeHead(200, {"Content-Type": "text/html"});
-	// response.write(body);
-	debugger;
-	//menuShow(response);
+	var xml = loadDB(); 
 	console.log("request.url; : " + request.url);
 	var filePath = '.' + request.url;
 	if (filePath == './')
@@ -49,10 +45,11 @@ function fileShow(response, filePath){
 
 
 function loadDB(source){
-	source = source || "db2.xml";
+	source = source || "db.xml";
 	var fs = require ('fs'), xml2js = require ('xml2js'); 
 	var json;
 	var db = fs.readFileSync(source, "utf-8");
+	debugger;
 	return db;
 }
 
