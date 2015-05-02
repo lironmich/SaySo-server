@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+	</head>
+
+	<body>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+        <header></header>
+		<div class="wrapper"> 
+			
+		</div>
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$.get('db.xml', function(d){
+			$('body').append('<h1> Our current DB </h1>');
+			$('body').append('<dl />');
+	 
+			debugger;            
+	 
+			//var html = '<dt> "checkbox" </dt>';
+			var	html =  '<ul>';
+				html += '<li class="title">' + $(d).attr("name") + '</li><br></br>';
+
+				$(d).children().each(function(){ // Curriculum
+					html += '<ul> <li class="title"> <strong>' + $(this).attr("name") + '</strong></li><br></br>';
+					
+					$(this).children().each(function(){ // lesson
+						html += '<div class="flashcard"><li><ul> <li><strong>' + $(this).attr("title") + '</strong></li>';
+						
+						$(this).children().each(function(){ // flashcard
+							if ($(this).attr("previewdisplay")){ 
+								html += '<li>' + $(this).attr("symbol") + " : " + $(this).text() + '</li>';
+							}
+						});
+						html += '</ul></li> </div> <br></br>';
+					});
+					html += '</ul><br></br>';
+				});
+				html += '</ul><br></br>';
+			debugger;
+			$('dl').append($(html));
+			debugger;
+	 
+ /*
+ 		console.log("Curriculum : " + $(d).attr("name")); // 
+		$(d).children().each(function(){ // Curriculum
+			console.log(" lesson : " + $(this).attr("name")); // 
+			$(this).children().each(function(){ // lesson
+				console.log("   flashcard : " + $(this).attr("title")); 
+				$(this).children().each(function(){ // flashcard
+					if ($(this).attr("previewdisplay")){ 
+						console.log( "    " + $(this).attr("symbol") + " : " + $(this).text());
+					}
+				});
+			});
+		}); */
+    });
+});
+		</script>
+	</body>
+</html>
