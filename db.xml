@@ -114,97 +114,97 @@
 	 <Lesson name="מקצועות">
 	 	<flashcard title="מקצוע" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מקצוע </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mehneh </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mehneh </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> مهنة </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="שוטר" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> שוטר </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Shorty </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Shorty </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> شرطي </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="רופא" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> רופא </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Tabeeb </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Tabeeb </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> طبيب </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="נגר" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> נגר </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Najjar </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Najjar </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> نجار </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="נפח" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> נפח </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> 7addad </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> 7addad </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> حداد </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="מנהל" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מנהל </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Modeer </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Modeer </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> مدير </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="עורך דין" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> עורך דין </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mo7amy </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mo7amy </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> محامي </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="שופט" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> שופט </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Qady </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Qady </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> قاضي </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="מוכר" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מוכר </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Baya3 </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Baya3 </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> بياع </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="סוחר" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> סוחר </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Tajer </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Tajer </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> تاجر </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="מורה" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מורה </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> M3almeh </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> M3almeh </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> مدير </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="מהנדס" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מהנדס </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mohandes </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mohandes </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> مهندس </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="נהג" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> נהג </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Sawaq </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Sawaq </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> سواق </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="חשמלאי" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> חשמלאי </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Kahrabjy </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Kahrabjy </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> كهربجي </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="מכונאי" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מכונאי\מוסכניק </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mekaneeky </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mekaneeky </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> ميكانيكي </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="פקיד" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> פקיד </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mowazaf </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mowazaf </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> موظف </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
@@ -213,152 +213,152 @@
 	<Lesson name="צבעים ותארים">
 		<flashcard title="סגול" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> סגול </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Kbeer </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Kbeer </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> كبير </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="יותר סגול" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> יותר סגול </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Sg'eer </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Sg'eer </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> صغير </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="גבוה" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> גבוה </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Taweel </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Taweel </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> طويل </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="קצר" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> קצר </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Qaseer </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Qaseer </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> قصير </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="קצת" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מעל \ קצת </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Shwai </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Shwai </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> شوي </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="הרבה" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> הרבה </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Ktheer </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Ktheer </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> كثير </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="אדום" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> אדום </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> A7mar </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> A7mar </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> أحمر </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="צבע" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> צבע </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Loun </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Loun </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> لون </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="צבע" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> צבע </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Dhan </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Dhan </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> دهان </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="שחור" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> שחור </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Aswad </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Aswad </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> أسود </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="לבן" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> לבן </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Abyad </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Abyad </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> أبيض </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="כחול" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> כחול </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Azraq </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Azraq </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> أزرق </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 </flashcard>
 		 <flashcard title="עצוב" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> עצוב </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Za3lan </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Za3lan </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> زعلان </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="מבסוט" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מבסוט </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mabsoot </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Mabsoot </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> مبسوط </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="עצבני" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> עצבני </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> 3asabe – m3asseb </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> 3asabe – m3asseb </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> عصبي معصب </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="רגוע" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> רגוע </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Rayeq </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Rayeq </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> رايق </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="ירוק" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> ירוק </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Akhdar </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Akhdar </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> أخضر </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="צהוב" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> צהוב </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Asfar </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Asfar </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> أصفر </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="ורוד" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> ורוד </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Warde </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Warde </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> وردي </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="אפור" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> אפור </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Sakane – remade </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Sakane – remade </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> سكني رمادي </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="חום" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> חום </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Bonne </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Bonne </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> بني </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="רעב" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> רעב </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Jo3an </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Jo3an </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> جوعان </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="שבע" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> שבע </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Shab3an </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Shab3an </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> شبعان </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="עייף" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> עייף </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Ta3ban </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Ta3ban </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> تعبان </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>
 		 <flashcard title="מנומנם" imageurl="./images/favicon.ico">
 			 <Hebrew previewDisplay = "true" ordernum = "-1" symbol = "עב"> מנומנם </Hebrew>
-			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Na3san </TranscriptHebrew>
+			 <TranscriptEnglish previewDisplay = "true" ordernum = "1" symbol  = "Ar"> Na3san </TranscriptEnglish>
 			 <Arabic previewDisplay = "true" ordernum = "0" symbol = "ال"> نعسان </Arabic>
 			 <!-- connect to success/fail -->
 		 </flashcard>

@@ -10,19 +10,14 @@
 	<body>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
         <header></header>
-		<div class="wrapper"> 
-			
-		</div>
-
+		
+		<div class="wrapper" style="width:200px;height:auto;border:1px solid #ccc;">
 		<script type="text/javascript">
 		$(document).ready(function() {
 			$.get('db.xml', function(d){
 			$('body').append('<h1> Our current DB </h1>');
 			$('body').append('<dl />');
-	 
-			debugger;            
-	 
-			//var html = '<dt> "checkbox" </dt>';
+			
 			var	html =  '<ul>';
 				html += '<li class="title">' + $(d).attr("name") + '</li><br></br>';
 
@@ -42,25 +37,11 @@
 					html += '</ul><br></br>';
 				});
 				html += '</ul><br></br>';
-			debugger;
 			$('dl').append($(html));
-			debugger;
-	 
- /*
- 		console.log("Curriculum : " + $(d).attr("name")); // 
-		$(d).children().each(function(){ // Curriculum
-			console.log(" lesson : " + $(this).attr("name")); // 
-			$(this).children().each(function(){ // lesson
-				console.log("   flashcard : " + $(this).attr("title")); 
-				$(this).children().each(function(){ // flashcard
-					if ($(this).attr("previewdisplay")){ 
-						console.log( "    " + $(this).attr("symbol") + " : " + $(this).text());
-					}
-				});
-			});
-		}); */
+	
     });
 });
 		</script>
+		</div>
 	</body>
 </html>
