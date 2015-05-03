@@ -2,10 +2,11 @@ var http = require("http");
 var url = require("url");
 var fs = require ("fs");
 var path = require('path');
+var $ = require('jquery');
 //var data = {};
 
 http.createServer(function(request, response) {
-	var xml = loadDB(); 
+	
 	console.log("request.url; : " + request.url);
 	var filePath = '.' + request.url;
 	if (filePath == './')
@@ -29,49 +30,66 @@ function fileShow(response, filePath){
 	}
 	console.log( "filePath : " + filePath);
 	
-	fs.readFile(filePath, function(error, content) {
-		if (error) {
-			console.log("error: " + error);
-			response.writeHead(500);
-			response.end();
-		}
-		else {
-			response.writeHead(200, { 'Content-Type': contentType });
-			response.end(content, 'utf-8')
-		}
-	});
-}
-
-
-
-function loadDB(source){
-	source = source || "db.xml";
-	var fs = require ('fs'), xml2js = require ('xml2js'); 
-	var json;
-	var db = fs.readFileSync(source, "utf-8");
-	debugger;
-	return db;
-}
-
-
-/*
-// move both to be called from dispatcher
-function fileShow(response, file){
-	fs.readFile(file, function(error, content) {
-		if (error) {
-			response.writeHead(500);
-			response.end();
-		}
-		else {
-			//process html
-			response.writeHead(200, { 'Content-Type': 'text/html' });
-			response.end(content, 'utf-8');
-		}
-	});
-}
-*/
-
 	
+	if (filePath =='./menu.html'){	
+		var menu = fs.readFileSync('menu.html', "utf-8");
+		var db =fs.readFileSync('db.xml', "utf-8");
+		
+		var content = parsexmldb(db, menu);
+		
+		response.writeHead(200, { 'Content-Type': contentType });
+		response.end(content, 'utf-8')
+		//console.log(content);
+	}
+	else{
+		fs.readFile(filePath, function(error, content) {
+			if (error) {
+				console.log("error: " + error);
+				response.writeHead(500);
+				response.end();
+			}
+			else {
+				response.writeHead(200, { 'Content-Type': contentType });
+				response.end(content, 'utf-8')
+			}
+		});
+	}
+}
+
+function parsexmldb(db, menu){
+	
+	var xmldoc = require('xmldoc');
+	var treemenu = new xmldoc.XmlDocument(db);
+	console.log("parsing xml pdb");
+	
+	var	html =  '<div id="menuTree" style="padding:5px">\n'
+		html += '<ul>\n'; 
+		html += '<span>' + treemenu.name + '</span>\n';
+		
+		//debugger;
+		treemenu.eachChild(function(Curriculum){
+			html += '<ul> <li  <span>' + Curriculum.attr.name + '</span>\n';
+			Curriculum.eachChild(function(Lesson){
+				html += '	<ul> <li> <span>' + Lesson.attr.name + '</span>\n';
+				Lesson.eachChild(function(flashcard){
+					html += '		<ul> <li> <span>' + flashcard.attr.title + '</span><ul>\n';
+					flashcard.eachChild(function(face){
+						console.log(face.attr.fieldSymbol);
+						if (face.attr.previewDisplay == "true"){ 
+							html += '			<li><span>' + face.attr.symbol + " : " + face.val + '</span></li>\n';
+						} 
+					});
+					html += '			</ul></li></ul>  '; 
+				});
+				html += '		</li></ul>\n';
+			});
+			html += '	</li></ul>\n';
+		});
+		
+	html += '</ul></div>\n';
+	parsed = menu.replace('<div id="tree"></div>', html);
+	return (parsed);	
+};
 
 // need to:
 
