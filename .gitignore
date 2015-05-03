@@ -1,5 +1,6 @@
 bin 
 obj 
-libs
+libs/jquery-easyui-1.4.2
+libs/themes
 node_modules
 images
