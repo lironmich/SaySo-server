@@ -12,7 +12,7 @@
 					html += '<ul> <li data-options=\"state:\'closed\'\"> <span>' + $(this).attr("name") + '<span>';
 					
 					$(this).children().each(function(){ // lesson
-						html += '<ul> <li data-options=\"state:\'closed\'\"> <span>' + $(this).attr("title") + '<span>';
+						html += '<ul> <li data-options=\"state:\'closed\'\"> <span>' + $(this).attr("title") + '<span><ul>';
 						
 						$(this).children().each(function(){ // flashcard
 							if ($(this).attr("previewdisplay")){ 
@@ -20,7 +20,7 @@
 								html += '<li><span>' + $(this).attr("symbol") + " : " + $(this).text() + '</span></li>';
 							}
 						});
-						html += '</ul> </li> '; 
+						html += '</ul></ul> </li> '; 
 					});
 					html += '</ul> </li>';	
 				});
