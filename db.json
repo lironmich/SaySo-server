@@ -1,0 +1,189 @@
+[{
+	"Curricula": [{
+		"Curriculum": [{
+			"name": "ערבית מדוברת לדוברי עברית",
+			"Lessons": [{
+				"name": "חיות",
+				"flashcards": [{
+					"חתולה": {
+						"Faces": [{
+							"symbol": "תעתיק",
+							"previewDisplay": "true",
+							"ordernum": "1",
+							"value": "בסה"
+						},
+						{
+							"symbol": "עב",
+							"previewDisplay": "true",
+							"ordernum": "-1",
+							"value": "חתולה"
+						},
+						{
+							"symbol": "ال",
+							"previewDisplay": "true",
+							"ordernum": "0",
+							"value": "سه"
+						}]
+					}
+				},
+				{
+					"תרנגולת": {
+						"Faces": [{
+							"symbol": "תעתיק",
+							"previewDisplay": "true",
+							"ordernum": "1",
+							"value": "גָ'אגָ'א"
+						},
+						{
+							"symbol": "עב",
+							"previewDisplay": "true",
+							"ordernum": "-1",
+							"value": "תרנגולת"
+						},
+						{
+							"symbol": "ال",
+							"previewDisplay": "true",
+							"ordernum": "0",
+							"value": "جاجة"
+						}]
+					}
+				},
+				{
+					"חמור": {
+						"Faces": [{
+							"symbol": "תעתיק",
+							"previewDisplay": "true",
+							"ordernum": "1",
+							"value": "חְמָאר"
+						},
+						{
+							"symbol": "עב",
+							"previewDisplay": "true",
+							"ordernum": "-1",
+							"value": "חמור"
+						},
+						{
+							"symbol": "ال",
+							"previewDisplay": "true",
+							"ordernum": "0",
+							"value": "حمار"
+						}]
+					}
+				},
+				{
+					"כלב": {
+						"Faces": [{
+							"symbol": "תעתיק",
+							"previewDisplay": "true",
+							"ordernum": "1",
+							"value": "כָאלְב"
+						},
+						{
+							"symbol": "עב",
+							"previewDisplay": "true",
+							"ordernum": "-1",
+							"value": "כלב"
+						},
+						{
+							"symbol": "ال",
+							"previewDisplay": "true",
+							"ordernum": "0",
+							"value": "كلب"
+						}]
+					}
+				},
+				{
+					"": {
+						"Faces": [{
+							"symbol": "תעתיק",
+							"previewDisplay": "true",
+							"ordernum": "1",
+							"value": ""
+						},
+						{
+							"symbol": "עב",
+							"previewDisplay": "true",
+							"ordernum": "-1",
+							"value": ""
+						},
+						{
+							"symbol": "ال",
+							"previewDisplay": "true",
+							"ordernum": "0",
+							"value": ""
+						}]
+					}
+				}]
+			},
+			{
+				"name": "מקצועות",
+				"flashcards": [{
+					"רופא": {
+						"Faces": [{
+							"symbol": "transcript",
+							"previewDisplay": "true",
+							"ordernum": "1",
+							"value": "Tabeeb"
+						},
+						{
+							"symbol": "עב",
+							"previewDisplay": "true",
+							"ordernum": "-1",
+							"value": "רופא"
+						},
+						{
+							"symbol": "ال",
+							"previewDisplay": "true",
+							"ordernum": "0",
+							"value": "طبيب"
+						}]
+					}
+				},
+				{
+					"נגר": {
+						"Faces": [{
+							"symbol": "transcript",
+							"previewDisplay": "true",
+							"ordernum": "1",
+							"value": "Najjar"
+						},
+						{
+							"symbol": "עב",
+							"previewDisplay": "true",
+							"ordernum": "-1",
+							"value": "נגר"
+						},
+						{
+							"symbol": "ال",
+							"previewDisplay": "true",
+							"ordernum": "0",
+							"value": "نجار"
+						}]
+					}
+				},
+				{
+					"": {
+						"Faces": [{
+							"symbol": "transcript",
+							"previewDisplay": "true",
+							"ordernum": "1",
+							"value": ""
+						},
+						{
+							"symbol": "עב",
+							"previewDisplay": "true",
+							"ordernum": "-1",
+							"value": ""
+						},
+						{
+							"symbol": "ال",
+							"previewDisplay": "true",
+							"ordernum": "0",
+							"value": ""
+						}]
+					}
+				}]
+			}]
+		}]
+	}]
+}]
