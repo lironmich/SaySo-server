@@ -6,8 +6,8 @@ function menuHandler(response){
 	var menu = fs.readFileSync('menu.html', "utf-8");
 	var dbsource =fs.readFileSync('db.json', "utf-8");
 	
-	var content = dbsource; 
-	
+	var content = dbAPI.parseJSONdb(dbsource, menu);
+	console.log("content : \n" + content.toString());
 	response.writeHead(200, { 'Content-Type':  'text/html' });
 	response.end(content, 'utf-8');
 }
@@ -16,6 +16,7 @@ function xmldbHandler(response){
 	var menu = fs.readFileSync('menu.html', "utf-8");
 	var dbsource =fs.readFileSync('db.xml', "utf-8");
 	var content = dbAPI.parsexmldb(dbsource, menu);
+	
 	response.writeHead(200, { 'Content-Type':  'text/html' });
 	response.end(content, 'utf-8');
 }

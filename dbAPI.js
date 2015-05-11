@@ -43,28 +43,38 @@ function parsexmldb(db, menu){
 	return (parsed);	
 };
 
+function parseJSONdb(db, menu){
+	
+	console.log("parseJSONdb \n\n\n" + db.toString());
+	
+	var html = '<div style="margin:20px 0;"> ' 
+	html += '<a href="#" class="easyui-linkbutton" onclick="getChecked()">GetChecked</a> ' 
+	html += '</div> ' 
+	html += '<div style="margin:10px 0"> ' 
+	html += '<input type="checkbox" checked onchange="$(\'#tt\').tree({cascadeCheck:$(this).is(\':checked\')})">CascadeCheck '
+	html += '<input type="checkbox" onchange="$(\'#tt\').tree({onlyLeafCheck:$(this).is(\':checked\')})">OnlyLeafCheck '  
+	html += '</div>'  
+	html += '<div class="easyui-panel" style="padding:5px"> '  
+	html += '<ul id="tt" class="easyui-tree" data-options="url:\'db.json\',method:\'get\',animate:true,checkbox:true"></ul> ' 
+	html += '</div> '
+	
+	html += ' <script type="text/javascript"> '
+    html += '     function getChecked(){ '
+    html += '         var nodes = $(\'#tt\').tree(\'getChecked\'); '
+    html += '         var s = ""; '
+    html += '         for(var i=0; i<nodes.length; i++){ '
+    html += '             if (s != "") s += ","; '
+    html += '             s += nodes[i].text; '
+    html += '         } '
+    html += '         alert(s); '
+    html += '     } '
+    html += ' </script> '
+	
+	parsed = menu.replace('<div id="tree"></div>', html);
+	return (parsed);	
+};
+
+exports.parseJSONdb = parseJSONdb;
 exports.parsexmldb = parsexmldb;
 
-/*
-<div style="margin:20px 0;">
-    <a href="#" class="easyui-linkbutton" onclick="getChecked()">GetChecked</a> 
-</div>
-<div style="margin:10px 0">
-	<input type="checkbox" checked onchange="$('#tt').tree({cascadeCheck:$(this).is(':checked')})">CascadeCheck 
-	<input type="checkbox" onchange="$('#tt').tree({onlyLeafCheck:$(this).is(':checked')})">OnlyLeafCheck
-</div>
-<div class="easyui-panel" style="padding:5px">
-	<ul id="tt" class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true,checkbox:true"></ul>
-</div>
-<script type="text/javascript">
-	function getChecked(){
-		var nodes = $('#tt').tree('getChecked');
-		var s = '';
-		for(var i=0; i<nodes.length; i++){
-			if (s != '') s += ',';
-			s += nodes[i].text;
-		}
-		alert(s);
-	}
-</script>
-*/
+
