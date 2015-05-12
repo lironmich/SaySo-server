@@ -52,10 +52,16 @@ header{padding:59px;padding-bottom:5px;line-height:40px;position:relative;}
   position: fixed; /* or absolute */
   top: 15%;
   bottom:15%;
-  left: 15%;
-  right:30px;
-  font-size: 48px;
-  
+  left: 30%;
+  right:30%;
+  font-size: 98px;
+}
+
+#faceSymbol{
+  position: fixed; /* or absolute */
+  top: 65%;
+  left: 65%;
+  font-size: 30px;
 }
 
 #leftInRec{
