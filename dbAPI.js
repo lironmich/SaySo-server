@@ -3,16 +3,28 @@ var fs = require ("fs"); // remove me
 var jsondb=""; // remove me
 var prettyjson = require('prettyjson');
 
+function mongoInit(){
+	var db = mongoose.connection;
+	db.on('error', console.error.bind(console, 'connection error:'));
+	db.once('open', function (callback) {
+	  console.log("mongo connection open");
+	  
+	  
+	  
+	});
+}
+
 function JSONGet(cardID, cardFace){
 	if (jsondb===""){
 		InitJSONDB();
 	}
 	var id = parseInt(cardID);
-	//var facenum = parseInt(cardFace);
-
+	var facenum = parseInt(cardFace);
+	
+	console.log("JSONGet : " + cardID + " : " + cardFace);
 	record = getObjects(jsondb, 'id', id);
 	face = getObjects(record, 'ordernum', cardFace);
-	
+	console.log("face" + face[0]["value"] + ' : ' + face[0]["symbol"]);
 	var data={};
 	if (face.length > 0){
 		data["faceText"] = face[0]["value"];
@@ -22,6 +34,8 @@ function JSONGet(cardID, cardFace){
 		data["faceText"] =  "out of boundary";
 		data["faceSymbol"] =  "OOB";
 	}
+	console.log("JSONGet : data[faceText]" + 	data["faceText"] +	"data[faceSymbol] : " + data["faceSymbol"] );
+	
 	return data;
 }
 
@@ -83,17 +97,7 @@ function getKeys(obj, val) {
 // ==========================
 
 
-function mongoInit(){
-	var db = mongoose.connection;
-	db.on('error', console.error.bind(console, 'connection error:'));
-	db.once('open', function (callback) {
-	  console.log("mongo connection open");
-	  
-	  
-	  
-	  
-	});
-}
+
 
 function parsexmldb(db, menu){
 	
@@ -140,6 +144,7 @@ function parsexmldb(db, menu){
 };
 
 function parseJSONdb(db, menu){
+	
 	jsondb = JSON.parse(db.toString('utf8')); // removeme
 	console.log("parseJSONdb \n\n\n" + db.toString());
 	

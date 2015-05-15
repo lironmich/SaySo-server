@@ -9,12 +9,11 @@ function cardHandler(response, parsedURL ){
 	var content ="";
 	var card = fs.readFileSync('record.html', "utf-8");
 	
-	console.log("\n\parsedURL : " + prettyjson.render(parsedURL));
-	
 	cardID = parsedURL["id"]|| 114; 
 	cardFace = parsedURL["face"] || 0;
-	
+	console.log("cardHandler getting data for cardID : " + cardID + " cardFace : " + cardFace);
 	data = dbAPI.JSONGet(cardID, cardFace); // make callback to response 
+	console.log("data[faceSymbo] : " + data["faceSymbol"] + "data[faceText] : " + data["faceText"]);
 	content = evalCard(card, data, cardID, cardFace);
 	
 	response.writeHead(200, { 'Content-Type':  'text/html' });
@@ -22,12 +21,13 @@ function cardHandler(response, parsedURL ){
 }
 
 function evalCard(card, data, cardID, cardFace){
+	console.log("evalCard : data[faceText] : " + data["faceText"] + " cardFace " + cardFace +  "\ndata[faceSymbol] : " +  data["faceSymbol"]);
 	content = card.replace('<div id="textBody">', '<p id = "textBody">' + data["faceText"]);
 	content = content.replace('<div id="faceSymbol">??', '<div id="faceSymbol">'+  data["faceSymbol"]);
 	
 	content = content.replace('faceright=\'---\'','faceright=\'./card?id=' + cardID + '&face=' + (parseInt(cardFace) + 1).toString() +'\'');
 	content = content.replace('faceleft=\'---\'', 'faceleft=\'./card?id=' + cardID + '&face=' + (parseInt(cardFace) - 1).toString()+'\'');
-	content = content.replace('stringNext = \'---\'', 'stringNext=\'./card?id=' + (parseInt(cardID)+1).toString() + '&face=' + "0\'");
+	content = content.replace('stringNext = \'---\'', 'stringNext=\'./card?id=' + (parseInt(cardID)+1).toString() + '&face=0\'');
 	return content
 	
 }
