@@ -146,7 +146,7 @@ function parsexmldb(db, menu){
 function parseJSONdb(db, menu){
 	
 	jsondb = JSON.parse(db.toString('utf8')); // removeme
-	console.log("parseJSONdb \n\n\n" + db.toString());
+	// console.log("parseJSONdb \n\n\n" + menu);
 	
 	var html = '<div style="margin:20px 0;"> \n' 
 	html += '<a href="#" class="easyui-linkbutton" onclick="getChecked()">GetChecked</a> \n' 
@@ -171,7 +171,9 @@ function parseJSONdb(db, menu){
     html += '     } \n'
     html += ' </script> \n'
 	
-	parsed = menu.replace('<div id="tree"></div>', html);
+	var parsed = menu.toString().replace('<div id="tree"></div>', html);
+	
+	// console.log(parsed);
 	return (parsed);	
 };
 

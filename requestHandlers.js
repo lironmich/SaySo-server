@@ -3,17 +3,12 @@ var fs = require ("fs");
 var dbAPI = require('./dbAPI');
 var prettyjson = require('prettyjson');
 
-
-function cardHandler(response, parsedURL ){
+function cardHandler(response, cardID, cardFace ){
 	
 	var content ="";
-	var card = fs.readFileSync('record.html', "utf-8");
+	var card = fs.readFileSync('views/record.html', "utf-8");
 	
-	cardID = parsedURL["id"]|| 114; 
-	cardFace = parsedURL["face"] || 0;
-	console.log("cardHandler getting data for cardID : " + cardID + " cardFace : " + cardFace);
 	data = dbAPI.JSONGet(cardID, cardFace); // make callback to response 
-	console.log("data[faceSymbo] : " + data["faceSymbol"] + "data[faceText] : " + data["faceText"]);
 	content = evalCard(card, data, cardID, cardFace);
 	
 	response.writeHead(200, { 'Content-Type':  'text/html' });
@@ -21,7 +16,7 @@ function cardHandler(response, parsedURL ){
 }
 
 function evalCard(card, data, cardID, cardFace){
-	console.log("evalCard : data[faceText] : " + data["faceText"] + " cardFace " + cardFace +  "\ndata[faceSymbol] : " +  data["faceSymbol"]);
+	
 	content = card.replace('<div id="textBody">', '<p id = "textBody">' + data["faceText"]);
 	content = content.replace('<div id="faceSymbol">??', '<div id="faceSymbol">'+  data["faceSymbol"]);
 	
@@ -29,21 +24,20 @@ function evalCard(card, data, cardID, cardFace){
 	content = content.replace('faceleft=\'---\'', 'faceleft=\'./card?id=' + cardID + '&face=' + (parseInt(cardFace) - 1).toString()+'\'');
 	content = content.replace('stringNext = \'---\'', 'stringNext=\'./card?id=' + (parseInt(cardID)+1).toString() + '&face=0\'');
 	return content
-	
 }
 
 function menuHandler(response){
-	var menu = fs.readFileSync('menu.html', "utf-8");
-	var dbsource =fs.readFileSync('db.json', "utf-8");
 	
+	var menu = fs.readFileSync('views/menu.html');
+	var dbsource =fs.readFileSync('db.json', "utf-8");
 	var content = dbAPI.parseJSONdb(dbsource, menu);
-	console.log("content : \n" + content.toString());
+	
 	response.writeHead(200, { 'Content-Type':  'text/html' });
 	response.end(content, 'utf-8');
 }
 
 function xmldbHandler(response){
-	var menu = fs.readFileSync('menu.html', "utf-8");
+	var menu = fs.readFileSync('views/menu.html', "utf-8");
 	var dbsource =fs.readFileSync('db.xml', "utf-8");
 	var content = dbAPI.parsexmldb(dbsource, menu);
 	
@@ -52,6 +46,7 @@ function xmldbHandler(response){
 }
 
 function defaultHandler(response, filePath){
+	console.log("defaultHandler  filePath : " + filePath);
 	var extname = path.extname(filePath);
 	var contentType = 'text/html';
 	switch (extname) {

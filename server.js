@@ -1,46 +1,73 @@
-/*
-var express = require('express');
-var app = express();
+var express      = require('express');        
+var app          = express();                
+var bodyParser   = require('body-parser');
+var path 	     = require('path');
+var favicon      = require('serve-favicon');
+var logger 	     = require('morgan');
+var cookieParser = require('cookie-parser');
+var mongoose = require('mongoose');
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(logger('dev'));
+app.use(cookieParser());
+
+var routes = require('./routes/index');
+var userRoutes = require('./routes/users');
+var apiRoutes = require('./routes/api');
+
+var router = express.Router();  
+var port = process.env.PORT || 8888;       
+
+app.use('/api', apiRoutes);
+app.use('/', routes);
+app.use('/users', userRoutes);
+
+router.get('/t', function(req, res) {
+   res.json({ message: 'hooray! welcome to our Index!' }); 
 });
 
-var server = app.listen(8888, function () {
+// START THE SERVER
+app.listen(port);
+console.log('Server started on port ' + port);
 
-  var host = server.address().address;
-  var port = server.address().port;
-
-  console.log('Example app listening at http://%s:%s', host, port);
-
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
-*/
 
-var http = require("http");
-var url = require("url");
+// error handlers
 
-
-function start(route, handle) {
-	function onRequest(request, response) {
-		var postData = "";
-		var pathname = '.' + request.url;
-		console.log("Request for " + pathname + " received.");
-		request.setEncoding("utf8");
-		
-		request.addListener("data", function(postDataChunk) {
-			postData += postDataChunk;
-			console.log("Received POST data chunk '"+ postDataChunk + "'.");
-		});
-		request.addListener("end", function() {
-			route(handle, pathname, response, postData);
-		});
-	}
-	
-	http.createServer(onRequest).listen(8888);
-	console.log("Server has started.");
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+  });
 }
-exports.start = start;
 
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
+
+module.exports = app;
 
 
 // need to:
@@ -57,3 +84,4 @@ exports.start = start;
 // set methodes
 // =============
 // Make web page to produce new Curriculum/ lessons/ records
+
