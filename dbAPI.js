@@ -21,10 +21,10 @@ function JSONGet(cardID, cardFace){
 	var id = parseInt(cardID);
 	var facenum = parseInt(cardFace);
 	
-	console.log("JSONGet : " + cardID + " : " + cardFace);
+
 	record = getObjects(jsondb, 'id', id);
 	face = getObjects(record, 'ordernum', cardFace);
-	console.log("face" + face[0]["value"] + ' : ' + face[0]["symbol"]);
+
 	var data={};
 	if (face.length > 0){
 		data["faceText"] = face[0]["value"];
@@ -34,7 +34,6 @@ function JSONGet(cardID, cardFace){
 		data["faceText"] =  "out of boundary";
 		data["faceSymbol"] =  "OOB";
 	}
-	console.log("JSONGet : data[faceText]" + 	data["faceText"] +	"data[faceSymbol] : " + data["faceSymbol"] );
 	
 	return data;
 }
@@ -42,6 +41,13 @@ function JSONGet(cardID, cardFace){
 function InitJSONDB(){ 
 	var dbsource =fs.readFileSync('db.json', "utf-8");
 	jsondb = JSON.parse(dbsource.toString('utf8'));
+}
+
+function GetJSONDB(){
+	if (jsondb===""){
+		InitJSONDB();
+	}
+	return jsondb;
 }
 
 function getObjects(obj, key, val) {
@@ -94,90 +100,6 @@ function getKeys(obj, val) {
  
  
 
-// ==========================
-
-
-
-
-function parsexmldb(db, menu){
-	
-	var xmldoc = require('xmldoc');
-	var treemenu = new xmldoc.XmlDocument(db);
-	
-	var	html =  '<div  id="menuTree" class="easyui-panel" style="padding:5px"  >\n'
-		html += '<ul class="easyui-tree"><li>\n'
-		html += '<span>' + treemenu.name + '</span>\n';
-		
-		//debugger;
-		
-		treemenu.eachChild(function(Curriculum){
-			html += '<ul>\n <li data-options="state:\'open\'">\n  \
-			<span class="easyui-checkbox">' + Curriculum.attr.name + '</span>\n';
-			
-			Curriculum.eachChild(function(Lesson){
-				html += '<ul>\n <li data-options="state:\'closed\'">\n \
-				<span class="easyui-checkbox">' + Lesson.attr.name + '</span>\n\n';
-				
-				Lesson.eachChild(function(flashcard){
-					html += '<ul>\n <li data-options="state:\'closed\'">\n \
-					<span class="easyui-checkbox">' + flashcard.attr.title + '</span><ul>\n';
-					
-					flashcard.eachChild(function(face){
-						if (face.attr.previewDisplay == "true"){ 
-							html += '		<li>' + face.attr.symbol + " : " + face.val + '</li>\n';
-						} 
-					});
-					
-					html += '</ul>\n</li>\n</ul>\n'; 
-				});
-				
-				html += '</li>\n</ul>\n';
-			});
-			
-			html += '</li>\n</ul>\n';
-		});
-		
-		
-	html += '</li>\n</ul>\n</div>\n';
-	parsed = menu.replace('<div id="tree"></div>', html);
-	return (parsed);	
-};
-
-function parseJSONdb(db, menu){
-	
-	jsondb = JSON.parse(db.toString('utf8')); // removeme
-	// console.log("parseJSONdb \n\n\n" + menu);
-	
-	var html = '<div style="margin:20px 0;"> \n' 
-	html += '<a href="#" class="easyui-linkbutton" onclick="getChecked()">GetChecked</a> \n' 
-	html += '</div> \n' 
-	html += '<div style="margin:10px 0"> \n' 
-
-	//html += '<input type="checkbox"  checked onchange="$(\'#tt\').tree({cascadeCheck:$(this).is(\':checked\')})">CascadeCheck '
-	//html += '<input type="checkbox" onchange="$(\'#tt\').tree({onlyLeafCheck:$(this).is(\':checked\')})">OnlyLeafCheck '  
-	html += '</div>\n'  
-	html += '<div class="easyui-panel" style="padding:5px"> \n'  
-	html += '<ul id="tt" class="easyui-tree" data-options="url:\'db.json\',method:\'get\',animate:true,checkbox:true"></ul> \n' 
-	html += '</div> \n'
-	
-	html += ' <script type="text/javascript"> \n'
-    html += '     function getChecked(){ \n'
-    html += '         var nodes = $(\'#tt\').tree(\'getChecked\'); \n'
-    html += '         var s = []; \n'
-    html += '         for(var i=0; i<nodes.length; i++){ \n'
-    html += '             s[s.length] = nodes[i].id; \n'
-    html += '         } \n'
-	html += '         window.location.href = "./card?id=" + s[Math.floor(Math.random()*s.length)] +"&face=0"';
-    html += '     } \n'
-    html += ' </script> \n'
-	
-	var parsed = menu.toString().replace('<div id="tree"></div>', html);
-	
-	// console.log(parsed);
-	return (parsed);	
-};
-
-exports.parseJSONdb = parseJSONdb;
-exports.parsexmldb = parsexmldb;
 exports.mongoInit = mongoInit;
 exports.JSONGet = JSONGet;
+exports.GetJSONDB = GetJSONDB;

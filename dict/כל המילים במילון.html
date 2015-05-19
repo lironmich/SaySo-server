@@ -8417,17 +8417,20 @@
 	<script type="text/javascript">
 
 	var words=[];
-	var id = 1111111;
+	var id = 11;
 	$(function() {
 		$(".simpleDiv").each(function() {
 		
 			var word={};
 			word["id"] = id;
+			word["type"] = "word";
+			
 			id+=1;
 			$(this).children().each(function() {
 			
 				var face={};
 				face["symbol"] = this.className;
+				face["type"] = "face";
 				
 				if (this.className == "heb"){
 					face["ordernum"] = 1;
@@ -8441,30 +8444,64 @@
 					face["ordernum"] = 0;
 				}
 				face["previewDisplay"] = true
-				face["value"] = $(this).text();
+				face["text"] = $(this).text();
 				word[face["symbol"]] = face;
 						
 			});
-			word["text"] = word["heb"]["value"];
+			word["text"] = word["heb"]["text"];
 			words[words.length] = word;
 		});
 		
 		var Curricula = {};
-		Curricula["id"] = 1;
+		Curricula["id"] = "1c";
 	    Curricula["text"] = "Curricula";
+		Curricula["type"] = "Curricula";
 		
 		var cur = {};
-		cur["id"] = 11;
+		cur["id"] = "11cu";
 		cur["text"] = "ערבית מדוברת לדוברי עברית";
+		cur["type"] = "Curriculum";
 		
 		var less = {}
-		less["id"] = 111;
+		less["id"] = "111les";
 		less["text"] = "מילון";
-		
+		less["type"] = "Lesson";
+		less["order"] = 21;
 		less["children"] = words;
-		cur["children"] = less;
-		Curricula["children"] = cur;
-		console.log (JSON.stringify(Curricula));
+		
+		var lessons = [{"text" : "אוכל", "id" : "1112les", "type" : "Lesson", "order" : 1, "children" : [{}] },
+		{ text : "בבית", id : "1113es", type : "Lesson", order : 2, children : [{}] },
+		{ text : "בגדים" , id : "1114es", type : "Lesson", order : 3, children : [{}] },
+		{ text : "בעלי חיים" , id : "1115es", type : "Lesson", order : 4, children : [{}] },
+		{ text : "ברכות" , id : "1116es", type : "Lesson", order : 5, children : [{}] },
+		{ text : "בשימוש בעברית" , id : "1117es", type : "Lesson", order : 6, children : [{}] },
+		{ text : "גוף האדם" , id : "1118es", type : "Lesson", order : 7, children : [{}] },
+		{ text : "דתות וחגים" , id : "1119es", type : "Lesson", order : 8, children : [{}] },
+		{ text : "זמן" , id : "1120es", type : "Lesson", order : 9, children : [{}] },
+		{ text : "כלכלה" , id : "112les", type : "Lesson", order : 10, children : [{}] },
+		{ text : "מזג אוויר" , id : "1123es", type : "Lesson", order : 11, children : [{}] },
+		{ text : "מספרים" , id : "1124es", type : "Lesson", order : 12, children : [{}] },
+		{ text : "מקומות" , id : "1125es", type : "Lesson", order : 13, children : [{}] },
+		{ text : "מקצועות" , id : "1126es", type : "Lesson", order : 14, children : [{}] },
+		{ text : "משפחה", id : "1127es", type : "Lesson", order : 15, children : [{}] },
+		{ text : "פוליטיקה", id : "1129es", type : "Lesson", order : 16, children : [{}] },
+		{ text : "צבא ובטחון", id : "1130es", type : "Lesson", order : 17, children : [{}] },
+		{ text : "צבעים", id : "113les", type : "Lesson", order : 18, children : [{}] },
+		{ text : "צמחים", id : "1132es", type : "Lesson", order : 19, children : [{}] },
+		{ text : "שאלות", id : "1133es", type : "Lesson", order : 20, children : [{}] }, less];
+		
+		
+	
+		debugger;
+		cur["children"] = lessons;
+		Curricula["children"] = [cur];
+		
+		function dispatchID(){
+			// recursivly add all id's with father id's
+		}
+		d = Curricula;
+		
+		console.log (JSON.stringify([d]));
 	});
 	</script>
 

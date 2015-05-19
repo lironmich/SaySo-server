@@ -2,6 +2,7 @@ var path = require('path');
 var fs = require ("fs");
 var dbAPI = require('./dbAPI');
 var prettyjson = require('prettyjson');
+var request = require("request");
 
 function cardHandler(response, cardID, cardFace ){
 	
@@ -26,27 +27,58 @@ function evalCard(card, data, cardID, cardFace){
 	return content
 }
 
-function menuHandler(response){
-	
+function menuHandler(response){	
 	var menu = fs.readFileSync('views/menu.html');
-	var dbsource =fs.readFileSync('db.json', "utf-8");
-	var content = dbAPI.parseJSONdb(dbsource, menu);
-	
+	var content = parseJSONdb(menu);
+			
 	response.writeHead(200, { 'Content-Type':  'text/html' });
-	response.end(content, 'utf-8');
+	response.end(content, 'utf-8'); 	
 }
 
-function xmldbHandler(response){
-	var menu = fs.readFileSync('views/menu.html', "utf-8");
-	var dbsource =fs.readFileSync('db.xml', "utf-8");
-	var content = dbAPI.parsexmldb(dbsource, menu);
+function parseJSONdb(menu){
 	
-	response.writeHead(200, { 'Content-Type':  'text/html' });
-	response.end(content, 'utf-8');
-}
+	// console.log("\n\n\nparseJSONdb ");
+	
+	var html = '<div style="margin:20px 0;"> \n' 
+	html += '<a href="#" class="easyui-linkbutton" onclick="getChecked()">GetChecked</a> \n' 
+	html += '</div> \n' 
+	html += '<div style="margin:10px 0"> \n' 
+
+	html += '<input type="checkbox"  checked onchange="$(\'#tt\').tree({cascadeCheck:$(this).is(\':checked\')})">CascadeCheck '
+	html += '<input type="checkbox" onchange="$(\'#tt\').tree({onlyLeafCheck:$(this).is(\':checked\')})">OnlyLeafCheck '  
+	html += '</div>\n'
+	html += '<form method="post" id="tree" >\n'	
+	html += '<div class="easyui-panel" style="padding:5px"> \n'  
+	html += '<ul id="tt" class="easyui-tree" data-options="url:\'db.json\',method:\'get\',animate:true,checkbox:true"></ul> \n' 
+	html += '</div> \n'
+	html += ' </form>\n'
+	html += ' <div id="submit"> Submit </div> '
+	html += ' <script type="text/javascript"> \n'
+
+	html += ' $( "#submit" ).click(function() { \n'
+	html += ' console.log("submit clicked"); \n'
+	html += '   $("#tree").append(\'<input type="hidden" name="ids" value=\' + getChecked() + \' />\'); \n'
+	html += '   $( "#tree" ).submit();  \n'
+	html += ' });  \n'
+    html += '     function getChecked(){ \n'
+    html += '         var nodes = $(\'#tt\').tree(\'getChecked\'); \n'
+    html += '         var s = []; \n'
+    html += '         for(var i=0; i<nodes.length; i++){ \n'
+    html += '             s[s.length] = nodes[i].id; \n'
+    html += '         } \n'
+	html += '         // window.location.href = "./card?id=" + s[Math.floor(Math.random()*s.length)] +"&face=0" \n';
+    html += '         return s.toString();'
+	html += '     } \n '
+    html += ' </script> \n'
+	
+	var parsed = menu.toString().replace('<div id="tree"></div>', html);
+	
+	// console.log(parsed);
+	return (parsed);	
+};
 
 function defaultHandler(response, filePath){
-	console.log("defaultHandler  filePath : " + filePath);
+	
 	var extname = path.extname(filePath);
 	var contentType = 'text/html';
 	switch (extname) {
@@ -73,5 +105,4 @@ function defaultHandler(response, filePath){
 
 exports.defaultHandler = defaultHandler;
 exports.menuHandler = menuHandler;
-exports.xmldbHandler = xmldbHandler;
 exports.cardHandler = cardHandler;
