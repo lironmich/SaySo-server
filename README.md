@@ -2,7 +2,7 @@
 server client phonegap project to manage better flahs cards.    
 
 # What is this project?
-This project aims to provide a repository plus server + smartphone app and web Interface for better flash crads.    
+This project aims to provide a repository + server + smartphone app and web Interface for better flash crads.    
 
 # Why do I need flash cards?    
 flash cards are possibly the best way to memorize and learn new Information weather Its a definitions list for an academic course or a list of words for your vocabulary in your native language or a new foreign language.     
@@ -14,7 +14,7 @@ there is also one GREAT edge. a digital flash card can have more than just 2 sid
 The basic need for this project came from my attempt to Improve my Arabic vocabulary.    
 on every single flash card I would like to have 3 "faces":    
 1) The word written in Arabic : شكر    
-2) Since my reading in Arabic is far from fluent I also need the word In Arabic but in letters I can understand. in this case: "Shukran".    
+2) Since my reading in Arabic is far from fluent I also need the Arabic word in letters I can understand. in this case: "Shukran".    
 3) The meaning of the word in a langugae I understand in this case : "Thanks".    
 
 If I was to do that with paper flash cards I'd have to either give up on one of those 3 valuesor or I would need 2 seperate
@@ -32,8 +32,8 @@ server will (in the future) run on heroku.
 there might be an angular.js managemant app. not to sure yet
 
 # Installation Instruction
-1) clone project
-2) cd Into project
-3)npm install
-4)node server.js
-5) on your browser go to 127.0.0.1:8888
+1) clone project  
+2) cd Into project  
+3)npm install  
+4)node server.js  
+5) on your browser go to 127.0.0.1:8888  
