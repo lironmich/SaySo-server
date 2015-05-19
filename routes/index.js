@@ -25,7 +25,7 @@ router.get('/db.json', function(req, res) {
 	res.json(data.MenuTreeGet()); // change to api call
 });
 
-router.get('/styles/*', function(req, res) {
+router.get('/public/*', function(req, res) {
 	var path = "." + url.parse(req.url).pathname;
 	RequestHandler.defaultHandler(res, path);
 });

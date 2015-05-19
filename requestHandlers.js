@@ -66,7 +66,7 @@ function parseJSONdb(menu){
     html += '         for(var i=0; i<nodes.length; i++){ \n'
     html += '             s[s.length] = nodes[i].id; \n'
     html += '         } \n'
-	html += '         // window.location.href = "./card?id=" + s[Math.floor(Math.random()*s.length)] +"&face=0" \n';
+	html += '         window.location.href = "./card?id=" + s[Math.floor(Math.random()*s.length)] +"&face=0" \n';
     html += '         return s.toString();'
 	html += '     } \n '
     html += ' </script> \n'

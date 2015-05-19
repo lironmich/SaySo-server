@@ -27,7 +27,7 @@ function JSONGet(cardID, cardFace){
 
 	var data={};
 	if (face.length > 0){
-		data["faceText"] = face[0]["value"];
+		data["faceText"] = face[0]["text"];
 		data["faceSymbol"] = face[0]["symbol"] ;
 	}
 	else {
