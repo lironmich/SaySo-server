@@ -13,7 +13,7 @@ there is also one GREAT edge. a digital flash card can have more than just 2 sid
 
 The basic need for this project came from my attempt to Improve my Arabic vocabulary.    
 on every single flash card I would like to have 3 "faces":    
-1) The word written in Arabic : شكر    
+1) A word written in Arabic : شكر    
 2) Since my reading in Arabic is far from fluent I also need the Arabic word in letters I can understand. in this case: "Shukran".    
 3) The meaning of the word in a langugae I understand in this case : "Thanks".    
 
