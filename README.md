@@ -11,6 +11,7 @@ flash cards are possibly the best way to memorize and learn new Information weat
 Beside the obvious advantages of digital vs a pile of papers (distributable, doesn't get lost, access from anywhere...)
 there is also one GREAT edge. a digital flash card can have more than just 2 sides!    
 
+# Use case scenario
 The basic need for this project came from my attempt to Improve my Arabic vocabulary.    
 on every single flash card I would like to have 3 "faces":    
 1) A word written in Arabic : شكر    
@@ -20,6 +21,7 @@ on every single flash card I would like to have 3 "faces":
 If I was to do that with paper flash cards I'd have to either give up on one of those 3 valuesor or I would need 2 seperate
 paper cards for each word! the current repository holds some 1500 words so I'd need 1500 PAIRS of cards and each pair has to be kept as a pair. thats just unmanagable.    
 
+#Data
 The first adat here which is used both as an example and for development purposses is a list of common words in spoken Arabic 
 In the Palastinian dialect and the matching meaning in Hebrew. hopefully in the future more people will donate flash cards for
 any type of use. SAT words, foreign languages, academic classes terminology etc...
