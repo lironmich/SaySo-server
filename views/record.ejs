@@ -16,8 +16,8 @@
 		<div class="wrapper"> 
 			<button type="button" Id="rightInRec"> < </button>
 			<button type="button" Id="leftInRec" > > </button>
-			<div id="textBody"></div>
-			<div id="faceSymbol">??</div>
+			<div id="textBody"><%=dataText %></div>
+			<div id="faceSymbol"><%=dataSymbol %></div>
 			<button type="button" Id="NextRecord"> Next</button>
 		</div>
 
@@ -25,9 +25,9 @@
 		 $(function() {
 			console.log("page loadded");
 			function linkDispatcher() {
-				faceright='---';
-				faceleft='---';
-				stringNext = '---';
+				faceright='./card?id=' +<%=cardID%> + '&face=' +<%=faceRight%>;
+				faceleft='./card?id=' + <%=cardID%> + '&face=' +<%=faceLeft%>;
+				stringNext = './nextcard';
 				
 				
 				$('#rightInRec').click(function(){

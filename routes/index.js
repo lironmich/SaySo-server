@@ -1,51 +1,109 @@
 var express = require('express');
 var router = express.Router();
-var RequestHandler = require('../requestHandlers')
+var RequestHandler = require('../models/requestHandlers')
 var url = require('url');
-var data = require('../dataWrapper');
+var data = require('../models/dataWrapper');
 var api = require('./api');
+var dbAPI = require('../models/dbAPI');
 
 var util = require('util');
 
-/* GET home page - menu. */
-router.get('/', function(req, res) {
-	RequestHandler.menuHandler(res);
-});
+module.exports = function(app, passport) {
+
+	/* GET home page - menu. */
+	app.route('/menu')
+		.get (function(req, res) {
+			res.render('menu.ejs');
+		})
+		
+		.post (function(req, res, next) {
+		   console.log('req to / : ' + req.body.ids);
+		   data.MoveCardToLesson('1112es', req.body.ids.toString());
+		   res.redirect('/Guest');
+		})
+
+	app.get('/Guest', function(req, res) {
+		res.redirect('/menu');
+	});
+
+	app.get('/FB', function(req, res) {
+		res.redirect('/menu');
+	});
 
 
-router.post('/', function(req, res, next) {
-   console.log('req to / : ' + req.body.ids);
-   data.MoveCardToLesson('1112es', req.body.ids.toString());
-   res.redirect('/');
-});
+
+	app.get('/', function(req, res) {
+
+			// render the page and pass in any flash data if it exists
+			res.render('index.ejs', { message: req.flash('loginMessage') }); 
+		});
+		
+		
+	app.get('/login', function(req, res) {
+
+			// render the page and pass in any flash data if it exists
+			res.render('login.ejs', { message: req.flash('loginMessage') }); 
+		});
+
+	app.get('/signup', function(req, res) {
+
+			// render the page and pass in any flash data if it exists
+			res.render('signup.ejs', { message: req.flash('signupMessage') });
+		});
+
+	// process the signup form
+	app.post('/signup', passport.authenticate('local-signup', {
+			
+			successRedirect : '/profile', // redirect to the secure profile section
+			failureRedirect : '/signup', // redirect back to the signup page if there is an error
+			failureFlash : true // allow flash messages
+		}));
+		
+	app.get('/profile', isLoggedIn, function(req, res) {
+			res.render('profile.ejs', {
+				user : req.user // get the user out of session and pass to template
+			});
+		});
+		
+	app.get('/logout', function(req, res) {
+			req.logout();
+			res.redirect('/');
+		});
 
 
+	function isLoggedIn(req, res, next) {
 
-router.get('/db.json', function(req, res) {
-	res.json(data.MenuTreeGet()); // change to api call
-});
+		// if user is authenticated in the session, carry on 
+		if (req.isAuthenticated())
+			return next();
 
-router.get('/public/*', function(req, res) {
-	var path = "." + url.parse(req.url).pathname;
-	RequestHandler.defaultHandler(res, path);
-});
+		// if they aren't redirect them to the home page
+		res.redirect('/');
+	}
 
-router.get('/nextcard/*', function(req, res) {
-	// get next card from users pool.
-});
+	app.get('/db.json', function(req, res) {
+		res.json(data.MenuTreeGet()); // change to api call
+	});
 
-router.get('/libs/*', function(req, res) {
-	var path = "." + url.parse(req.url).pathname;
-	RequestHandler.defaultHandler(res, path);
-});
+	app.get('/public/*', function(req, res) {
+		var path = "." + url.parse(req.url).pathname;
+		RequestHandler.defaultHandler(res, path);
+	});
 
-// GET card 
-router.get('/card', function(req, res) {
-	
-	var id = req.param('id');
-	var face = req.param('face'); // update me
-	
-	RequestHandler.cardHandler(res, id, face);
-});
+	app.get('/nextcard/*', function(req, res) {
+		// get next card from users sesion pool.
+	});
 
-module.exports = router;
+	app.get('/libs/*', function(req, res) {
+		var path = "." + url.parse(req.url).pathname;
+		RequestHandler.defaultHandler(res, path);
+	});
+
+	// GET card 
+	app.get('/card', function(req, res) {
+		data = dbAPI.JSONGet(req.param('id'), req.param('face'));	
+		res.render('record.ejs', { 'cardID' : req.param('id'), 'dataText' : data["faceText"],
+			 'dataSymbol' : data["faceSymbol"], 'faceRight' : (parseInt( req.param('face')) + 1),
+			 'faceLeft' : (parseInt( req.param('face')) - 1) });
+	});
+};

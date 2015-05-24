@@ -6,33 +6,39 @@ var favicon      = require('serve-favicon');
 var logger 	     = require('morgan');
 var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
+var session      = require('express-session');
+var passport = require('passport');
+var flash    = require('connect-flash');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
+
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
-app.use(cookieParser());
+app.use(cookieParser()); 
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true }));
 
-var routes = require('./routes/index');
-var userRoutes = require('./routes/users');
-var apiRoutes = require('./routes/api');
+// required for passport
+app.use(session({ secret: 'betterflashcardshasnosecrets' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
 
-var router = express.Router();  
+
+// var router = express.Router();  
 var port = process.env.PORT || 8888;       
 
-app.use('/api', apiRoutes);
-app.use('/', routes);
-app.use('/users', userRoutes);
+require('./routes/index')(app, passport); 
+//require('./routes/users')(app, passport); 
+require('./routes/api')(app, passport); 
 
-router.get('/t', function(req, res) {
-   res.json({ message: 'hooray! welcome to our Index!' }); 
-});
+require('./config/passport')(passport);
 
-// START THE SERVER
+// Start the server
 app.listen(port);
 console.log('Server started on port ' + port);
 
@@ -68,20 +74,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-
-// need to:
-
-
-// get methodes SOUP
-// =============
-// on relevant request - send full list of Curriculum's
-// on relevant request with Curriculum's ID - send list of lessons
-// on relevant request with lessons ID - send list of records
-
-// for start - save list of records and supply random one to user
-
-// set methodes
-// =============
-// Make web page to produce new Curriculum/ lessons/ records
 

@@ -1,15 +1,16 @@
-var express = require('express');
-var router = express.Router();
-var data = require('../dataWrapper');
+//var express = require('express');
+//var router = express.Router();
+var data = require('../models/dataWrapper');
 
-var prettyjson = require('prettyjson');
+// var prettyjson = require('prettyjson');
 
-/* GET home page. */
-router.get('/', function(req, res) {
+module.exports = function(app, passport) {
+	
+app.get('/', function(req, res) {
 	res.json(data.MenuTreeGet());
 });
 
-router.route('/Curriculum:Curriculum_id')
+app.route('/Curriculum:Curriculum_id')
 
     .get(function(req, res) {
 		
@@ -31,7 +32,7 @@ router.route('/Curriculum:Curriculum_id')
 
 // router.route('/Curriculum:Curriculum_id/Lesson:Lesson_id')
 
-router.route('/Lesson:Lesson_id')
+app.route('/Lesson:Lesson_id')
 
     .get(function(req, res) {
 		id = req.params.Lesson_id;
@@ -50,7 +51,7 @@ router.route('/Lesson:Lesson_id')
         console.log('post function');
     })	
 
-router.route('/card:card_id/face:ordernum')
+app.route('/card:card_id/face:ordernum')
     .get(function(req, res) {
 		id = req.params.card_id;
 		ordernum = req.params.ordernum;
@@ -58,7 +59,7 @@ router.route('/card:card_id/face:ordernum')
 		res.json(data.jsonGetFaceCard(id, ordernum));
     })
 	
-router.route('/card:card_id')
+app.route('/card:card_id')
 	
     .get(function(req, res) {
 		id = req.params.card_id;
@@ -66,7 +67,7 @@ router.route('/card:card_id')
 		res.json(data.jsonGetCardById(id));
     })
 	
-router.route('/Curriculum:Curriculum_id/Lesson:Lesson_id/card:card_id')
+app.route('/Curriculum:Curriculum_id/Lesson:Lesson_id/card:card_id')
 
     .get(function(req, res) {
 		id = req.params.card_id;
@@ -85,12 +86,12 @@ router.route('/Curriculum:Curriculum_id/Lesson:Lesson_id/card:card_id')
         console.log('post function');
     })	
 	
-router.route('/Curriculums')
+app.route('/Curriculums')
 	.get(function(req, res) {
 		res.json(data.Curriculums());
     })
 	
-router.route('/Curriculum:Curriculum_id/Lesson:Lesson_id/card:card_id/face:symbol')
+app.route('/Curriculum:Curriculum_id/Lesson:Lesson_id/card:card_id/face:symbol')
 
     .get(function(req, res) {
 		
@@ -109,4 +110,4 @@ router.route('/Curriculum:Curriculum_id/Lesson:Lesson_id/card:card_id/face:symbo
         console.log('post function');
     })		
 
-module.exports = router;
+};
