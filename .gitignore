@@ -1,9 +1,0 @@
-bin 
-obj 
-libs/jquery-easyui-1.4.2
-libs/themes
-node_modules
-node_modules/*
-images
-dict/כל המילים במילון_files
-BetExp
