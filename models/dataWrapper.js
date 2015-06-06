@@ -2,12 +2,14 @@ var fs = require ("fs");
 
 var prettyjson = require('prettyjson');
 var jsondb = jsondbfull = "";
-
 function InitJSONDB(){
 	console.log("InitJSONDB");	
 	var dbsource =fs.readFileSync('./db.json', "utf-8");
-	jsondbfull = JSON.parse(dbsource.toString('utf8'))
-	jsondb = stripFaces(jsondbfull);
+	//  var dbsource =fs.readFileSync("/Users/razkron/flashCards/db.json", "utf-8");
+
+	jsondb = JSON.parse(dbsource.toString('utf8'));
+	jsondbfull = jsondb;
+	//jsondb = stripFaces(jsondb);
 	//console.log("jsondb : " + jsondb);
 }
 
@@ -15,22 +17,22 @@ InitJSONDB();
 
 function MoveCardToLesson(lesson, cardlist){
 	var cards = cardlist.split(',');
-	var less = getObjects(jsondbfull, 'id', '1112es')[0];
+	var less = getObjects(jsondb, 'id', lesson)[0];
+	if (jsondb == "") InitJSONDB();
 	
+	// hard codded for now
 	cards.forEach (function(element, index, array) { // mehh
 		if (element.indexOf("es") < 0){
-			less.children[less.children.length] = getObjects(jsondbfull, 'id', parseInt(element));
+			jsondb[0].children[0].children[20].children[less.children.length] = getObjects(jsondb, 'id', parseInt(element))[0];
 		}
 	});
-	
-	
-	
-	console.log('typeof(less.children) : '+ typeof(less.children) +' less :' +  prettyjson.render(less));
-	//console.log('getObjects :' +  prettyjson.render(getObjects(jsondbfull, 'id', parseInt(cards[0]))));
-	
 
 }
 
+function remevoeCard(){
+
+	//jsondb[0].children[0].children[20].children[less.children.length] 
+}
 function MenuTreeGet(){
 	if (jsondb == "") InitJSONDB();
 	return jsondb || ""; // change to jsondb
@@ -63,7 +65,7 @@ function jsonGetLesson(Lesson_id){
 function jsonGetCardById(Card_id){
 	if (jsondb == "") InitJSONDB();
 	
-	Card = getObjects(jsondbfull, 'id', Card_id);
+	Card = getObjects(jsondb, 'id', Card_id);
 	console.log("jsondb :" + prettyjson.render(Card));
 
 	return Card|| "";
