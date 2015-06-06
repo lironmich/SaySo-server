@@ -18,8 +18,13 @@ module.exports = function(app, passport) {
 		
 		.post (function(req, res, next) {
 		   console.log('req to / : ' + req.body.ids);
-		   data.MoveCardToLesson('1135es', req.body.ids.toString());
-		   res.redirect('/Guest');
+			// write id's to session
+			// make card navigation between those marked
+			sess=req.session;
+			sess.ids = req.body.ids.toString();
+
+		   // data.MoveCardToLesson('1135es', req.body.ids.toString());
+		   res.redirect('/nextcard');
 		})
 
 	app.get('/Guest', function(req, res) {
@@ -90,8 +95,19 @@ module.exports = function(app, passport) {
 		RequestHandler.defaultHandler(res, path);
 	});
 
-	app.get('/nextcard/*', function(req, res) {
-		// get next card from users sesion pool.
+	app.get('/nextcard', function(req, res) {
+			if(sess.ids){
+				var cards = sess.ids.split(',');
+				console.log('\n\n\n sess.ids : ' + sess.ids);
+
+				var randid = cards[ parseInt(cards.length * Math.random())];
+				if (randid == req.params.card_id){
+					var randid = cards[cards.length];
+				}
+
+				var newurl = '/card?id=' + randid.toString() + '&face=0';
+				res.redirect(newurl);
+			}
 	});
 
 	app.get('/libs/*', function(req, res) {
