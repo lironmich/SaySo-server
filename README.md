@@ -39,3 +39,6 @@ there might be an angular.js managemant app. not to sure yet
 3)npm install  
 4)node server.js  
 5) on your browser go to 127.0.0.1:8888  
+
+# current status
+can display dictionery, select cards, save them in session and navigate through the chosen cards from the session. but only for one user
