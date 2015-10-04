@@ -1,6 +1,5 @@
 var path = require('path');
 var fs = require ("fs");
-var dbAPI = require('./dbAPI');
 var prettyjson = require('prettyjson');
 var request = require("request");
 

@@ -1,0 +1,95 @@
+[{
+
+"curricula" : {
+	"admins" : [],
+	"name" : "",
+	"_id" : ""
+
+},
+
+"subcategory" : {
+	"curricula_id" : "",
+	"_id" : "",
+	"symbol" : ["heb", "arb", "hebtranscript", "engtranscript"],
+	"cardIDs" : ["dual binding - Good Idea ?"]
+
+},
+
+"_comment": "Indexs on curricula and subcategory, possibly on ordernum",
+"_comment": "Is sorting by ordernum in the DB possible",
+
+db.cards.insert({
+"card" : {
+	"curricula_id" : "",
+	"subcategory_id": "",
+	"cardname" : "",
+	"faces" : [
+		{
+				"ordernum" : 0,
+				"symbol" : "subcategory_id.symbol",
+				"text" : "",
+				"sound" : false,
+				"previewDisplay": true
+
+		},
+		{
+				"ordernum" : -1,
+				"symbol" : "subcategory_id.symbol",
+				"text" : "",
+				"sound" : false,
+				"previewDisplay": false
+
+		},
+		{
+				"ordernum" : 1,
+				"symbol" : "subcategory_id.symbol",
+				"text" : "",
+				"sound" : false,
+				"previewDisplay": true
+		}
+	]
+}
+})
+
+
+}]
+
+/*
+When your application starts up, Mongoose automatically calls ensureIndex for each 
+defined index in your schema. Mongoose will call ensureIndex for each index sequentially,
+and emit an 'index' event on the model when all the ensureIndex calls succeeded or when
+there was an error. While nice for development, it is recommended this behavior be disabled
+in production since index creation can cause a significant performance impact. Disable the 
+behavior by setting the autoIndex option of your schema to false, or globally on the 
+connection by setting the option config.autoIndex to false
+ */
+
+var curriculaSchema = new Schema({
+  name: String,
+  admins: String, // users
+});
+
+var subcategorySchema = new Schema({
+  curricula_id: objectId,
+  symbol: String, 
+});
+
+
+var cardSchema = new Schema({
+  cardname: String,
+  subcategory_id: { type: [objectId], index: true } ,
+  curricula_id : { type: [objectId], index: true } ,
+  tags: { type: [String], index: true } ,
+  faces : [
+  			ordernum : int,
+  			symbol : "subcategory_id.symbol",
+			text : String
+			sound : Bolean,
+			previewDisplay : Bolean
+  		  ]
+});
+
+/*
+Indexs on curricula and subcategory, possibly on ordernum
+Is sorting by ordernum in the DB possible
+*/

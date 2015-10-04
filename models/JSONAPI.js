@@ -2,17 +2,9 @@ var mongoose = require('mongoose');
 var fs = require ("fs"); // remove me
 var jsondb=""; // remove me
 var prettyjson = require('prettyjson');
+var models = require('../models/models');
 
-function mongoInit(){
-	var db = mongoose.connection;
-	db.on('error', console.error.bind(console, 'connection error:'));
-	db.once('open', function (callback) {
-	  console.log("mongo connection open");
-	  
-	  
-	  
-	});
-}
+
 
 function JSONGet(cardID, cardFace){
 	if (jsondb===""){
@@ -34,7 +26,7 @@ function JSONGet(cardID, cardFace){
 		data["faceText"] =  "out of boundary";
 		data["faceSymbol"] =  "OOB";
 	}
-	
+
 	return data;
 }
 
@@ -98,8 +90,5 @@ function getKeys(obj, val) {
     return objects;
 }
  
- 
-
-exports.mongoInit = mongoInit;
 exports.JSONGet = JSONGet;
 exports.GetJSONDB = GetJSONDB;

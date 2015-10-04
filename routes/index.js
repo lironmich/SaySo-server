@@ -4,7 +4,8 @@ var RequestHandler = require('../models/requestHandlers')
 var url = require('url');
 var data = require('../models/dataWrapper');
 var api = require('./api');
-var dbAPI = require('../models/dbAPI');
+var dbAPI = require('../models/JSONAPI');
+var models = require('../models/models');
 
 var util = require('util');
 
