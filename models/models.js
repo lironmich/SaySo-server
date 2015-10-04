@@ -43,18 +43,6 @@ var Curricula = mongoose.model('Curricula', curriculaSchema);
 var Subcategory = mongoose.model('Subcategory', subcategorySchema);
 var Card = mongoose.model('Card', cardSchema);
 
-// exports.curriculaSchema = curriculaSchema;
-// exports.subcategorySchema = subcategorySchema;
-// exports.cardSchema = cardSchema;
-
 exports.Curricula = Curricula;
 exports.Subcategory = Subcategory;
 exports.Card = Card;
-
-/*
-var PackageSchema = new Schema({
-    id: ObjectId,
-    title: { type: String, required: true },
-    flashcards: [ {type : mongoose.Schema.ObjectId, ref : 'Flashcard'} ]
-});
-*/
