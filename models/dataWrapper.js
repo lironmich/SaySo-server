@@ -1,5 +1,5 @@
 var fs = require ("fs"); 
-var models = require('../models/models');
+var models = require('../models2/models');
 
 var prettyjson = require('prettyjson');
 var jsondb = jsondbfull = "";

@@ -4,8 +4,8 @@ var RequestHandler = require('../models/requestHandlers')
 var url = require('url');
 var data = require('../models/dataWrapper');
 var api = require('./api');
-var dbAPI = require('../models/JSONAPI');
-var models = require('../models/models');
+var JSONAPI = require('../models/JSONAPI');
+var models = require('../models2/models');
 
 var util = require('util');
 
@@ -118,7 +118,7 @@ module.exports = function(app, passport) {
 
 	// GET card 
 	app.get('/card', function(req, res) {
-		data = dbAPI.JSONGet(req.param('id'), req.param('face'));	
+		data = JSONAPI.JSONGet(req.param('id'), req.param('face'));	
 		res.render('record.ejs', { 'cardID' : req.param('id'), 'dataText' : data["faceText"],
 			 'dataSymbol' : data["faceSymbol"], 'faceRight' : (parseInt( req.param('face')) + 1),
 			 'faceLeft' : (parseInt( req.param('face')) - 1) });
