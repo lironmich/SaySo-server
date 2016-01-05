@@ -3,6 +3,7 @@ var router = express.Router();
 var RequestHandler = require('../models/requestHandlers')
 var url = require('url');
 var data = require('../models/dataWrapper');
+var mongodata = require('../models2/mongoAPI');
 var api = require('./api');
 var JSONAPI = require('../models/JSONAPI');
 var models = require('../models2/models');
@@ -35,8 +36,6 @@ module.exports = function(app, passport) {
 	app.get('/FB', function(req, res) {
 		res.redirect('/menu');
 	});
-
-
 
 	app.get('/', function(req, res) {
 
@@ -87,6 +86,12 @@ module.exports = function(app, passport) {
 		res.redirect('/');
 	}
 
+	app.get('/db.mongo', function(req, res) {
+
+		mongodata.Tester(res);
+		//res.json(); // api tester
+	});
+
 	app.get('/db.json', function(req, res) {
 		res.json(data.MenuTreeGet()); // change to api call
 	});
@@ -123,4 +128,6 @@ module.exports = function(app, passport) {
 			 'dataSymbol' : data["faceSymbol"], 'faceRight' : (parseInt( req.param('face')) + 1),
 			 'faceLeft' : (parseInt( req.param('face')) - 1) });
 	});
+
+
 };

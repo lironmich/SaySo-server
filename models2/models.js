@@ -12,7 +12,7 @@ function mongoInit(){
   });
 }
 
-mongoose.connect('mongodb://localhost/cards3');
+mongoose.connect('mongodb://localhost/cards');
 var Schema = mongoose.Schema;
 
 var curriculaSchema = new Schema({
@@ -27,7 +27,7 @@ var subcategorySchema = new Schema({
 
 
 var cardSchema = new Schema({
-  cardname: String,
+  name: String,
   subcategory: [subcategorySchema],
   //tags: { type: [String], index: true } ,
   facess : [{

@@ -4,8 +4,6 @@ var jsondb=""; // remove me
 var prettyjson = require('prettyjson');
 
 
-
-
 function JSONGet(cardID, cardFace){
 	if (jsondb===""){
 		InitJSONDB();

@@ -3,7 +3,7 @@ var models = require('../models2/models');
 
 var prettyjson = require('prettyjson');
 var jsondb = jsondbfull = "";
-function InitJSONDB(){
+function InitJSONDB() {
 	console.log("InitJSONDB");	
 	var dbsource =fs.readFileSync('./db.json', "utf-8");
 	jsondb = JSON.parse(dbsource.toString('utf8'));
@@ -86,7 +86,7 @@ function convertDB(){
 
 	        	var word = new card({
 					subcategory : categorys[categorys.length -1],
-					name : obj["heb"]["text"],
+					name : obj["heb"]["text"], //symbol
 					facess : facess
 	        	});
 
@@ -111,7 +111,7 @@ function convertDB(){
 }
 
 InitJSONDB();
-//convertDB();
+// convertDB();
 
 
 
