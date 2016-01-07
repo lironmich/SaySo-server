@@ -1,6 +1,5 @@
 var models = require('./models');
 var prettyjson = require('prettyjson');
-var Promise = require('promise');
 
 var Q = require('q');
 
@@ -16,7 +15,6 @@ var getCardWithQ = function (){
 		if (err) {deferred.reject(err)}
 
 		else{
-			console.log("cards : " + cards);
 			deferred.resolve( cards);
 		}
 

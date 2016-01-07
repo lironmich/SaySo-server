@@ -15,6 +15,8 @@ function mongoInit(){
 mongoose.connect('mongodb://localhost/cards');
 var Schema = mongoose.Schema;
 
+
+// Cards
 var curriculaSchema = new Schema({
   name: String,
   admins: String, // users
@@ -39,9 +41,34 @@ var cardSchema = new Schema({
   		  }]
 });
 
+
+// SaySo
+
+var movieSchema = new Schema({
+  name: String,
+  provider: String, // maybe schema?
+  link: String,
+});
+
+
+
+var subtitlesSchema = new Schema({
+  movie: [movieSchema],
+  subs : Object,
+});
+
+
+// Decs
+
+var Movie = mongoose.model('Movie', movieSchema);
+var Subtitle = mongoose.model('Subtitle', subtitlesSchema);
+
 var Curricula = mongoose.model('Curricula', curriculaSchema);
 var Subcategory = mongoose.model('Subcategory', subcategorySchema);
 var Card = mongoose.model('Card', cardSchema);
+
+exports.Movie = Movie;
+exports.Subtitle = Subtitle;
 
 exports.Curricula = Curricula;
 exports.Subcategory = Subcategory;

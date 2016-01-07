@@ -1,62 +1,75 @@
-var express = require('express');
-var router = express.Router();
-var RequestHandler = require('../models/requestHandlers')
-var url = require('url');
+
+// Mock for Dor
+ sub1 = {"00:00:18,578 --> 00:00:19,963" : "first line "};
+ sub2 = {"00:00:19,993 --> 00:00:21,265" : "second line"};
+ sub3 = {"00:00:21,380 --> 00:00:22,903" : "third line"};
+
+ he_tr_en1= {"00:00:18,578 --> 00:00:19,963" : "shura rishona"};
+ he_tr_en2= {"00:00:19,993 --> 00:00:21,265" : "shura shniya"};
+ he_tr_en3= {"00:00:21,380 --> 00:00:22,903" : "shura shlishit"};
+
+ heb1= {"00:00:18,578 --> 00:00:19,963" : "שורה ראשונה"};
+ heb2= {"00:00:19,993 --> 00:00:21,265" : "שורה שנייה"};
+ heb3= {"00:00:21,380 --> 00:00:22,903" : "שורה שלישית"};
+
+ blocks=[];
+ blocks[0] = {'en' : sub1, 'heb' : heb1,  couplings : [ ["שורה", "line", "shura"], ["second", "ראשונה", "rishona"] ] };
+ blocks[1] = {'en' : sub2, 'heb' : heb2,  couplings : [ ["שורה", "line", "shura"], ["second", "שנייה", "shniya"] ]  };
+ blocks[2] = {'en' : sub3, 'heb' : heb3,  couplings : [ ["שורה", "line", "shura"], ["second", "שלישית", "shlishit"] ]  };
 
 
-/*
- sub1 = " line 1";
- sub2 = "second line";
- sub3 = "third line";
-
- heb1= "שורה ראשונה";
- heb1= "שורה שנייה";
- heb1= "שורה שלישית";
-
- blocks[];
- blocks[1] = {'en' : sub1, 'heb' : heb1,  couplings : {} };
- blocks[2] = {'en' : sub2, 'heb' : heb2,  couplings : {} };
- blocks[3] = {'en' : sub3, 'heb' : heb3,  couplings : {} };
-
- */
 
 
-app.route('/movie:Lesson_id')
 
-    .get(function(req, res) {
-		id = req.params.Lesson_id;
-		res.json(data.jsonGetLesson(id));
-    })
+//var mongodata = require('../models2/mongoAPI');
+//var api = require('./api');
+//var JSONAPI = require('../models/JSONAPI');
+//var models = require('../models2/models');
+//var util = require('util');
 
-    .put(function(req, res) {
-        console.log('put function');
-    })
+module.exports = function(app, passport) {
 
-    .delete(function(req, res) {
-        console.log('delete function');
-    })
+    // full movie
+    // http://127.0.0.1:8888/movie/2424?lan1=he&lan2=en&lan3=tr
+    app.get('/movie/:movie_id', function(req, res) {
 
-    .post(function(req, res) {
-        console.log('post function');
-    })
+        id = req.params.movie_id;
+        lan1 = req.query.lan1;
+        lan2 = req.query.lan2;
+        lan3 = req.query.lan3;
 
-app.route('/card:card_id/face:ordernum')
-    .get(function(req, res) {
-		id = req.params.card_id;
-		ordernum = req.params.ordernum;
-		console.log("ordernum : " + ordernum);
-		res.json(data.jsonGetFaceCard(id, ordernum));
-    })
+        console.log("app.route('/movie/:Movie_id') : lan3 = " + lan3);
+        res.json(blocks);
+    });
 
-// Dor Saban API
-app.get('/sayso/subs', function(req, res) {
-    //lan1 = req.param('lan1');
-    //lan1 = req.param('lan2');
-    //movie_id = req.param('movie_id'));
-    //
-    //
-    //var subs = {lan1 : {}, lan2 : {}, map1 : {}, map2 : {}};
-    //
-    //res.json(subs);
 
-});
+    app.get('/teachermenu', function(req, res) {
+        res.redirect('/menu');
+    });
+
+    //  http://127.0.0.1:8888/teacher/movie/2424?lan1=he&lan2=en&lan3=tr
+    app.route('/teacher/movie/:movie_id')
+
+        .get(function(req, res) {
+
+            id = req.params.movie_id;
+            lan1 = req.query.lan1;
+            lan2 = req.query.lan2;
+            lan3 = req.query.lan3;
+
+            res.json("");
+        })
+
+        .put(function(req, res) {
+            console.log('put function');
+        })
+
+        .delete(function(req, res) {
+            console.log('delete function');
+        })
+
+        .post(function(req, res) {
+            console.log('post function');
+        })
+
+};

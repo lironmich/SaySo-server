@@ -5,6 +5,7 @@ var url = require('url');
 var data = require('../models/dataWrapper');
 var mongodata = require('../models2/mongoAPI');
 var api = require('./api');
+var subapi = require('./subapi');
 var JSONAPI = require('../models/JSONAPI');
 var models = require('../models2/models');
 
@@ -128,6 +129,8 @@ module.exports = function(app, passport) {
 			 'dataSymbol' : data["faceSymbol"], 'faceRight' : (parseInt( req.param('face')) + 1),
 			 'faceLeft' : (parseInt( req.param('face')) - 1) });
 	});
+
+
 
 
 };
