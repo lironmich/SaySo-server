@@ -5,7 +5,7 @@ var prettyjson = require('prettyjson');
 var jsondb = jsondbfull = "";
 function InitJSONDB() {
 	console.log("InitJSONDB");	
-	var dbsource =fs.readFileSync('./db.json', "utf-8");
+	var dbsource =fs.readFileSync('Input/db.json', "utf-8");
 	jsondb = JSON.parse(dbsource.toString('utf8'));
 }
 

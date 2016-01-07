@@ -28,6 +28,7 @@ var subcategorySchema = new Schema({
 });
 
 
+
 var cardSchema = new Schema({
   name: String,
   subcategory: [subcategorySchema],
@@ -43,6 +44,11 @@ var cardSchema = new Schema({
 
 
 // SaySo
+
+var languageSchema = new Schema({
+  symbol : String,
+  name : String,
+})
 
 var movieSchema = new Schema({
   name: String,

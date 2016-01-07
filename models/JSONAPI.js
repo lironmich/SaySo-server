@@ -29,7 +29,7 @@ function JSONGet(cardID, cardFace){
 }
 
 function InitJSONDB(){ 
-	var dbsource =fs.readFileSync('db.json', "utf-8");
+	var dbsource =fs.readFileSync('Input/db.json', "utf-8");
 	jsondb = JSON.parse(dbsource.toString('utf8'));
 }
 

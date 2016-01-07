@@ -18,16 +18,18 @@
  blocks[2] = {'en' : sub3, 'heb' : heb3,  couplings : [ ["שורה", "line", "shura"], ["second", "שלישית", "shlishit"] ]  };
 
 
-
-
-
-//var mongodata = require('../models2/mongoAPI');
+var mongodata = require('../models2/mongoAPI');
 //var api = require('./api');
 //var JSONAPI = require('../models/JSONAPI');
 //var models = require('../models2/models');
 //var util = require('util');
 
 module.exports = function(app, passport) {
+
+    app.get('/tester', function(req, res) {
+
+        mongodata.Tester(res);
+    });
 
     // full movie
     // http://127.0.0.1:8888/movie/2424?lan1=he&lan2=en&lan3=tr
