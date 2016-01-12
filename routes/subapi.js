@@ -26,10 +26,25 @@ var mongodata = require('../models2/mongoAPI');
 
 module.exports = function(app, passport) {
 
+
+    app.route('/teacher')
+        .get (function(req, res) {
+            res.render('teacher.ejs');
+        })
+
     app.get('/tester', function(req, res) {
 
+        // res.json(blocks);
         mongodata.Tester(res);
     });
+
+    app.get('/cliplist', function(req, res) {
+        mongodata.clipList(res);
+    });
+
+    // get / set movie = movie=id / new
+
+
 
     // full movie
     // http://127.0.0.1:8888/movie/2424?lan1=he&lan2=en&lan3=tr
@@ -44,10 +59,6 @@ module.exports = function(app, passport) {
         res.json(blocks);
     });
 
-
-    app.get('/teachermenu', function(req, res) {
-        res.redirect('/menu');
-    });
 
     //  http://127.0.0.1:8888/teacher/movie/2424?lan1=he&lan2=en&lan3=tr
     app.route('/teacher/movie/:movie_id')

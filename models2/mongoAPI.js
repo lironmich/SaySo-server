@@ -13,24 +13,52 @@ var movie = models.Movie;
 var sub = models.Subtitle;
 
 
+// get movie list
+function clipList(res){
+	var list = [{
+		name : "movie1",
+		provider : "movie2",
+		link : "url//blala",
+		},
+	{
+		name : "movie2222",
+		provider : "movie222222222",
+		link : "url//blalablalablala",
+	}];
+
+	res.json(list);
+}
+
+// add / update clip
+
+// get clip
+
 var convertSub = function(){
 	console.log("converting subtitles");
 
 	// open files
 	var en =fs.readFileSync('./Input/SV-2x1 en.srt', "utf-8");
-	var fr =fs.readFileSync('./Input/SV-2x1 fr.srt', "utf-8");
-	var pt =fs.readFileSync('./Input/SV-2x1 pt.srt', "utf-8");
+	//var fr =fs.readFileSync('./Input/SV-2x1 fr.srt', "utf-8");
+	//var pt =fs.readFileSync('./Input/SV-2x1 pt.srt', "utf-8");
 
 	// parse to json
-	ens =en.split('\r');
-	frs =fr.split('\r');
-	pts =pt.split('\r');
+	ens = en.split('\r');
+	for (var line in ens) {
+		if (parseInt(ens[line])) {
+		// if (ens[line].match("\d+")){ // ? why like this ?
+			var i="i";
+		}
+		else{
+			var i=0;
+		}
+	}
+	// for line in ens
+	// if block number create block
+	// if 2 lines of subtitles split time and add block
+	// insert timestamp : text for 1 or 2 blocks
 
 
 	var t=1;
-
-
-
 
 	// save to db
 
@@ -55,12 +83,9 @@ var getCardWithQ = function (){
 
 function Tester(res){
 
-	convertSub();
-
-	res.json("");
-
-	//
-
+	//clipslist(res);
+	//convertSub();
+	//res.json("");
 }
 
 // function Tester(res){
@@ -74,3 +99,4 @@ function Tester(res){
 //	});
 //}
 exports.Tester = Tester;
+exports.clipList = clipList;

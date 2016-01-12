@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html ng-app="teacherApp">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+<body>
+<header></header>
+<p></p>
+
+<div class="container">
+
+<input ng-model="test"></input>
+{{test}}
+
+<div class="container" ng-controller="tableManage">
+    <h1>Movie list</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Provider</th>
+            <th>Link</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="movie in list">
+                <td>{{movie.name}}</td>
+                <td>{{movie.provider}}</td>
+                <td>{{movie.link}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+<!--<div>-->
+<!--<select>-->
+    <!--<option value="en">en</option>-->
+    <!--<option value="he">he</option>-->
+<!--</select>-->
+
+<!--<input type="file"></input>-->
+<!--</div>-->
+
+<script src="/libs/angular.1.5.0.min.js"></script>
+<script src="/controllers/teacerInt.js"></script>
+<script type="text/javascript">
+
+    function tableManage(){
+        console.log("appctrl angular hello world!")
+        //$http.get('/cliplist')
+    }
+</script>
+</body>
+</html>
+

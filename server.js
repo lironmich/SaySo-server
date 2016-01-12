@@ -11,10 +11,8 @@ var passport = require('passport');
 var flash    = require('connect-flash');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-
+ app.set('views', path.join(__dirname, 'views'));
+ app.set('view engine', 'ejs');
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));

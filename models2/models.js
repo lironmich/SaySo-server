@@ -57,11 +57,31 @@ var movieSchema = new Schema({
 });
 
 
-
 var subtitlesSchema = new Schema({
   movie: [movieSchema],
   subs : Object,
 });
+
+//[
+//{
+//  "en":
+//  {
+//    "00:00:18,578 --> 00:00:19,963": "first line "
+//  },
+//  "heb":
+//  {
+//    "00:00:18,578 --> 00:00:19,963": "שורה ראשונה"
+//  },
+//  "couplings":
+//  [
+//    [
+//      "שורה",
+//      "line",
+//      "shura"
+//    ],
+//  ]
+//}, {...}
+//]
 
 
 // Decs

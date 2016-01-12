@@ -13,6 +13,8 @@ var util = require('util');
 
 module.exports = function(app, passport) {
 
+
+
 	/* GET home page - menu. */
 	app.route('/menu')
 		.get (function(req, res) {
@@ -118,6 +120,11 @@ module.exports = function(app, passport) {
 	});
 
 	app.get('/libs/*', function(req, res) {
+		var path = "." + url.parse(req.url).pathname;
+		RequestHandler.defaultHandler(res, path);
+	});
+
+	app.get('/controllers/*', function(req, res) {
 		var path = "." + url.parse(req.url).pathname;
 		RequestHandler.defaultHandler(res, path);
 	});
