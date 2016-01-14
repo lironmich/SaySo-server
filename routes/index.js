@@ -4,7 +4,6 @@ var RequestHandler = require('../models/requestHandlers')
 var url = require('url');
 var data = require('../models/dataWrapper');
 var mongodata = require('../models2/mongoAPI');
-var api = require('./api');
 var subapi = require('./subapi');
 var JSONAPI = require('../models/JSONAPI');
 var models = require('../models2/models');
@@ -13,29 +12,9 @@ var util = require('util');
 
 module.exports = function(app, passport) {
 
-
+	// Auth
 
 	/* GET home page - menu. */
-	app.route('/menu')
-		.get (function(req, res) {
-			res.render('menu.ejs');
-		})
-		
-		.post (function(req, res, next) {
-		   console.log('req to / : ' + req.body.ids);
-			// write id's to session
-			// make card navigation between those marked
-			sess=req.session;
-			sess.ids = req.body.ids.toString();
-
-		   // data.MoveCardToLesson('1135es', req.body.ids.toString());
-		   res.redirect('/nextcard');
-		})
-
-	app.get('/Guest', function(req, res) {
-		res.redirect('/menu');
-	});
-
 	app.get('/FB', function(req, res) {
 		res.redirect('/menu');
 	});
@@ -43,7 +22,7 @@ module.exports = function(app, passport) {
 	app.get('/', function(req, res) {
 
 			// render the page and pass in any flash data if it exists
-			res.render('index.ejs', { message: req.flash('loginMessage') }); 
+			res.render('index.ejs', { message: req.flash('loginMessage') });
 		});
 		
 		
@@ -89,12 +68,6 @@ module.exports = function(app, passport) {
 		res.redirect('/');
 	}
 
-	app.get('/db.mongo', function(req, res) {
-
-		mongodata.Tester(res);
-		//res.json(); // api tester
-	});
-
 	app.get('/db.json', function(req, res) {
 		res.json(data.MenuTreeGet()); // change to api call
 	});
@@ -129,6 +102,45 @@ module.exports = function(app, passport) {
 		RequestHandler.defaultHandler(res, path);
 	});
 
+
+	// cards mongo API
+
+	app.get('/curriculumslist', function(req, res) { // New Mongo ??
+		mongodata.curriculasList(res);
+	});
+
+	app.get('/fullcategoryslist', function(req, res) { // New Mongo !!
+		mongodata.categorysList(res);
+	});
+
+	// 127.00.1:8888/categorys/curiculum5687dfdc4983004b2dc62ad0
+	app.get('/categorys/curiculum:curiculumid', function(req, res) { // New Mongo !!
+		mongodata.categorysByCurricula(res, req.params.curiculumid);
+		console.log('req.params.curiculumid  ' + req.params.curiculumid);
+	});
+
+	app.get('/fullcardslist', function(req, res) { // New Mongo ??
+		mongodata.cardsList(res);
+	});
+
+	// 127.00.1:8888/cardslist/category5687dfdc4983004b2dc62ad1
+	app.get('/cardslist/category:categoryid', function(req, res) { // New Mongo ??
+		mongodata.cardsByCategory(res, req.params.categoryid);
+		console.log ('req.params.categoryid  ' + req.params.categoryid);
+	});
+
+	// 127.00.1:8888/cardslist/card5687dfdc4983004b2dc62ade
+	app.get('/cardslist/card:cardid', function(req, res) { // New Mongo ??
+		mongodata.cardsById(res, req.params.cardid);
+		console.log ('req.params.cardid  ' + req.params.cardid);
+	});
+
+
+
+
+
+
+
 	// GET card 
 	app.get('/card', function(req, res) {
 		data = JSONAPI.JSONGet(req.param('id'), req.param('face'));	
@@ -138,6 +150,122 @@ module.exports = function(app, passport) {
 	});
 
 
+	app.route('/card:card_id/face:ordernum')
+			.get(function(req, res) {
+				id = req.params.card_id;
+				ordernum = req.params.ordernum;
+				console.log("ordernum : " + ordernum);
+				res.json(data.jsonGetFaceCard(id, ordernum));
+			})
 
+	app.route('/card:card_id')
+
+			.get(function(req, res) {
+				id = req.params.card_id;
+				console.log("id " + id);
+				res.json(data.jsonGetCardById(id));
+			})
+
+
+	app.route('/Lesson:Lesson_id')
+
+			.get(function(req, res) {
+				id = req.params.Lesson_id;
+				res.json(data.jsonGetLesson(id));
+			})
+
+			.put(function(req, res) {
+				console.log('put function');
+			})
+
+			.delete(function(req, res) {
+				console.log('delete function');
+			})
+
+			.post(function(req, res) {
+				console.log('post function');
+			})
+
+	app.route('/Curriculum:Curriculum_id')
+
+			.get(function(req, res) {
+
+				id = req.params.Curriculum_id;
+				res.json(data.jsonGetCuriculum(id));
+			})
+
+			.put(function(req, res) {
+				console.log('put function');
+			})
+
+			.delete(function(req, res) {
+				console.log('delete function');
+			})
+
+			.post(function(req, res) {
+				console.log('post function');
+			})
+
+
+	app.route('/Curriculum:Curriculum_id/Lesson:Lesson_id/card:card_id')
+
+			.get(function(req, res) {
+				id = req.params.card_id;
+				res.json(data.jsonGetCard(id));
+			})
+
+			.put(function(req, res) {
+				console.log('put function');
+			})
+
+			.delete(function(req, res) {
+				console.log('delete function');
+			})
+
+			.post(function(req, res) {
+				console.log('post function');
+			})
+
+
+
+	app.route('/Curriculum:Curriculum_id/Lesson:Lesson_id/card:card_id/face:symbol')
+
+			.get(function(req, res) {
+
+				res.json("");
+			})
+
+			.put(function(req, res) {
+				console.log('put function');
+			})
+
+			.delete(function(req, res) {
+				console.log('delete function');
+			})
+
+			.post(function(req, res) {
+				console.log('post function');
+			})
+
+
+	app.route('/menu')
+			.get (function(req, res) {
+				res.render('menu.ejs');
+			})
+
+			.post (function(req, res, next) {
+				console.log('req to / : ' + req.body.ids);
+				// write id's to session
+				// make card navigation between those marked
+				sess=req.session;
+				sess.ids = req.body.ids.toString();
+
+				// data.MoveCardToLesson('1135es', req.body.ids.toString());
+				res.redirect('/nextcard');
+			})
+
+	app.get('/Guest', function(req, res) {
+		res.redirect('/menu');
+	});
 
 };

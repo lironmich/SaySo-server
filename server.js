@@ -32,7 +32,7 @@ var port = process.env.PORT || 8888;
 
 require('./routes/index')(app, passport); 
 //require('./routes/users')(app, passport); 
-require('./routes/api')(app, passport);
+//require('./routes/api')(app, passport);
 require('./routes/subapi')(app, passport);
 
 require('./config/passport')(passport);
