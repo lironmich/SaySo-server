@@ -22,17 +22,13 @@
             <thead>
             <tr>
                 <th>Name</th>
-                <th>face text</th>
-                <th>face text</th>
-                <th>face text</th>
+                <th>Category</th>
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="card in list">
                 <td>{{card.name}}</td>
-                <td>{{card.facess[0].text}}</td>
-                <td>{{card.facess[1].text}}</td>
-                <td>{{card.facess[2].text}}</td>
+                <td>{{card.subcategory[0].symbol}}</td>
             </tr>
             </tbody>
         </table>

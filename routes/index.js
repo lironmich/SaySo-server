@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var RequestHandler = require('../models/requestHandlers')
+var RequestHandler = require('../models2/requestHandlers')
 var url = require('url');
 var data = require('../models/dataWrapper');
 var mongodata = require('../models2/mongoAPI');

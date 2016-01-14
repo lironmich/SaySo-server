@@ -2,13 +2,881 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2abc4943-b9a6-4914-b213-14f538de77d8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cardsmenu.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/error.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/login.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/profile.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/signup.ejs" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/CardPartials/CardManage.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/CardPartials/CardView.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/TeacherPartials/MovieList.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/TeacherPartials/subEditor.ejs" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Input/SV-2x1 en.srt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Input/SV-2x1 fr.srt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Input/SV-2x1 pt.srt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/db.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/by.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/cc.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/email.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/fbds.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/ga.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/gmail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/logo_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/sa.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dict/כל המילים במילון_files/youtube.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-1.4.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/accordion/_content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/accordion/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/accordion/header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/animation/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/animation/fade.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/animation/pop.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/animation/slide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/badge/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/badge/button.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/badge/list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/badge/tabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/button/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/button/group.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/button/icon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/button/style.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/datagrid/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/datagrid/rowediting.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/datalist/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/datalist/group.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/datalist/selection.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/dialog/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/dialog/message.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/form/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/images/login1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/images/modem.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/images/more.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/images/pda.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/images/scanner.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/images/tablet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/input/numberspinner.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/input/textbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/layout/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/menu/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/menu/menubar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/panel/_content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/panel/ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/panel/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/panel/nav.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/simplelist/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/simplelist/button.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/simplelist/group.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/simplelist/image.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/simplelist/link.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/tabs/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/tabs/nav.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/tabs/pill.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/toolbar/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/toolbar/button.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/toolbar/menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/tree/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo-mobile/tree/dnd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/_content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/datagrid_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/expandable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/multiple.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/accordion/tools.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/calendar/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/calendar/custom.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/calendar/disabledate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/calendar/firstday.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/calendar/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combo/animation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combo/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/combobox_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/combobox_data2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/customformat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/dynamicdata.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/group.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/icons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/multiline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/multiple.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/navigation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/remotedata.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combobox/remotejsonp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combogrid/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combogrid/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combogrid/datagrid_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combogrid/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combogrid/initvalue.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combogrid/multiple.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combogrid/navigation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combotree/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combotree/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combotree/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combotree/initvalue.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combotree/multiple.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/combotree/tree_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/aligncolumns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/cacheeditor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/cellediting.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/cellstyle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/clientpagination.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/columngroup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/complextoolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/contextmenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/custompager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/datagrid_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/datagrid_data2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/formatcolumns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/frozencolumns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/frozenrows.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/mergecells.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/multisorting.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/products.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/rowborder.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/rowediting.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/rowstyle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/selection.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/simpletoolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datagrid/transform.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datalist/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datalist/checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datalist/datalist_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datalist/group.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datalist/multiselect.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datalist/remotedata.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/clone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/dateformat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/events.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/restrict.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/sharedcalendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datebox/validate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datetimebox/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datetimebox/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datetimebox/initvalue.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datetimebox/showseconds.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datetimespinner/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datetimespinner/clearicon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datetimespinner/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/datetimespinner/format.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/dialog/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/dialog/complextoolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/dialog/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/dialog/toolbarbuttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/draggable/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/draggable/constrain.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/draggable/snap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/droppable/accept.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/droppable/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/droppable/sort.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/easyloader/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/filebox/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/filebox/buttonalign.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/filebox/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/form/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/form/form_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/form/load.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/form/validateonsubmit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/_content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/addremove.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/autoheight.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/complex.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/datagrid_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/full.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/nestedlayout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/nocollapsible.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/propertygrid_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/layout/tree_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/linkbutton/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/linkbutton/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/linkbutton/group.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/linkbutton/iconalign.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/linkbutton/plain.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/linkbutton/size.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/linkbutton/style.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/linkbutton/toggle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/menu/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/menu/customitem.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/menu/events.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/menu/inline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/menubutton/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/menubutton/alignment.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/menubutton/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/messager/alert.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/messager/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/messager/interactive.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/messager/position.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/numberbox/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/numberbox/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/numberbox/format.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/numberbox/range.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/numberspinner/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/numberspinner/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/numberspinner/increment.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/numberspinner/range.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/pagination/attaching.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/pagination/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/pagination/custombuttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/pagination/layout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/pagination/links.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/pagination/simple.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/panel/_content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/panel/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/panel/customtools.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/panel/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/panel/footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/panel/loadcontent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/panel/nestedpanel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/panel/paneltools.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/progressbar/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/progressbar/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/propertygrid/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/propertygrid/customcolumns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/propertygrid/groupformat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/propertygrid/propertygrid_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/resizable/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/searchbox/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/searchbox/category.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/searchbox/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/slider/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/slider/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/slider/formattip.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/slider/nonlinear.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/slider/range.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/slider/rule.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/slider/vertical.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/splitbutton/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/splitbutton/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/_content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/autoheight.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/dropdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/fixedwidth.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/hover.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/images/modem.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/images/pda.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/images/scanner.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/images/tablet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/nestedtabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/striptools.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/style.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/tabimage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/tabposition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/tabstools.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tabs/tree_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/textbox/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/textbox/button.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/textbox/clearicon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/textbox/custom.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/textbox/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/textbox/icons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/textbox/multiline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/textbox/size.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/timespinner/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/timespinner/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/timespinner/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/timespinner/range.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/_content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/_dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/customcontent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/customstyle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/position.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/toolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tooltip/tooltipdialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/animation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/contextmenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/dnd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/editable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/formatting.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/icons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/lazyload.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/lines.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/tree_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/tree/tree_data2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/clientpagination.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/contextmenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/editable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/lines.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/reports.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/treegrid_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/treegrid_data2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/treegrid/treegrid_data3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/validatebox/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/validatebox/customtooltip.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/validatebox/validateonblur.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/window/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/window/customtools.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/window/fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/window/footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/window/inlinewindow.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/window/modalwindow.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/demo/window/windowlayout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/easyloader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/jquery.easyui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/jquery.easyui.mobile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/licence_gpl.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-am.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-cz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-jp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-sv_SE.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/locale/easyui-lang-zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.accordion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.combo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.combobox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.combogrid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.combotree.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.datagrid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.datalist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.datebox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.datetimebox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.datetimespinner.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.draggable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.droppable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.filebox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.layout.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.linkbutton.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.menu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.menubutton.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.messager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.mobile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.numberbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.numberspinner.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.pagination.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.panel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.parser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.progressbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.propertygrid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.resizable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.searchbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.slider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.spinner.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.splitbutton.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.tabs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.textbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.timespinner.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.tree.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.treegrid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.validatebox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/plugins/jquery.window.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/easyloader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.accordion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.combobox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.datebox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.draggable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.droppable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.linkbutton.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.menu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.parser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.progressbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.propertygrid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.resizable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.slider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.tabs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/src/jquery.window.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/combo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/combobox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/datagrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/datalist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/datebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/easyui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/filebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/accordion_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/calendar_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/combo_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/datagrid_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/datebox_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/layout_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/linkbutton_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/menu_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/messager_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/pagination_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/panel_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/searchbox_button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/slider_handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/spinner_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/tabs_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/tree_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/images/validatebox_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/layout.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/linkbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/menubutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/messager.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/numberbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/pagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/panel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/propertygrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/searchbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/slider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/spinner.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/splitbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/textbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/tooltip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/tree.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/validatebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/black/window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/combo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/combobox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/datagrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/datalist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/datebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/easyui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/filebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/accordion_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/calendar_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/combo_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/datagrid_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/datebox_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/layout_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/linkbutton_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/menu_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/messager_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/pagination_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/panel_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/searchbox_button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/slider_handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/spinner_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/tabs_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/tree_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/images/validatebox_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/layout.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/linkbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/menubutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/messager.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/numberbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/pagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/panel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/propertygrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/searchbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/slider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/spinner.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/splitbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/textbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/tooltip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/tree.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/validatebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/bootstrap/window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/color.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/combo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/combobox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/datagrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/datalist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/datebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/easyui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/filebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/accordion_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/calendar_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/combo_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/datagrid_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/datebox_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/layout_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/linkbutton_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/menu_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/messager_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/pagination_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/panel_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/searchbox_button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/slider_handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/spinner_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/tabs_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/tree_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/images/validatebox_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/layout.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/linkbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/menubutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/messager.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/numberbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/pagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/panel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/propertygrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/searchbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/slider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/spinner.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/splitbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/textbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/tooltip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/tree.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/validatebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/default/window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/combo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/combobox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/datagrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/datalist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/datebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/easyui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/filebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/accordion_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/calendar_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/combo_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/datagrid_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/datebox_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/layout_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/linkbutton_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/menu_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/messager_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/pagination_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/panel_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/searchbox_button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/slider_handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/spinner_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/tabs_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/tree_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/images/validatebox_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/layout.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/linkbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/menubutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/messager.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/numberbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/pagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/panel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/propertygrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/searchbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/slider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/spinner.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/splitbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/textbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/tooltip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/tree.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/validatebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/gray/window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icon.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/back.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/clear.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/cut.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/edit_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/edit_remove.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/filesave.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/filter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/large_chart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/large_clipart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/large_picture.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/large_shapes.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/large_smartart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/man.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/mini_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/mini_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/mini_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/more.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/no.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/ok.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/pencil.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/print.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/redo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/reload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/sum.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/tip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/icons/undo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/combo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/combobox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/datagrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/datalist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/datebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/easyui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/filebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/accordion_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/calendar_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/combo_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/datagrid_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/datebox_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/layout_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/linkbutton_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/menu_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/messager_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/pagination_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/panel_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/searchbox_button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/slider_handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/spinner_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/tabs_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/tree_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/images/validatebox_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/layout.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/linkbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/menubutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/messager.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/numberbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/pagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/panel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/propertygrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/searchbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/slider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/spinner.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/splitbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/textbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/tooltip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/tree.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/validatebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/metro/window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery-easyui-1.4.2/themes/mobile.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery.easyui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery.easyui.mobile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/easyui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/accordion_collapse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/accordion_expand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/button_a_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/button_plain_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/button_span_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/calendar_nextmonth.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/calendar_nextyear.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/calendar_prevmonth.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/calendar_prevyear.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/combo_arrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/datagrid_header_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/datagrid_row_collapse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/datagrid_row_expand.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/datagrid_sort_asc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/datagrid_sort_desc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/datagrid_title_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/datebox_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/layout_button_down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/layout_button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/layout_button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/layout_button_up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/menu.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/menu_downarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/menu_rightarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/menu_sep.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/menu_split_downarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/messager_error.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/messager_info.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/messager_question.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/messager_warning.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/pagination_first.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/pagination_last.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/pagination_load.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/pagination_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/pagination_next.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/pagination_prev.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/panel_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/panel_title.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/panel_tool_collapse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/panel_tool_expand.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/panel_tools.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/spinner_arrow_down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/spinner_arrow_up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tabs_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tabs_close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tabs_enabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tabs_leftarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tabs_rightarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_arrows.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_checkbox_0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_checkbox_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_checkbox_2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_dnd_no.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_dnd_yes.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_file.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_folder.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_folder_open.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/tree_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/validatebox_pointer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/default/images/validatebox_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/combo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/combobox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/datagrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/datebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/easyui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/accordion_collapse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/accordion_expand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/button_a_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/button_plain_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/button_span_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/calendar_nextmonth.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/calendar_nextyear.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/calendar_prevmonth.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/calendar_prevyear.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/combo_arrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/datagrid_header_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/datagrid_row_collapse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/datagrid_row_expand.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/datagrid_sort_asc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/datagrid_sort_desc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/datagrid_title_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/datebox_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/layout_button_down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/layout_button_left.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/layout_button_right.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/layout_button_up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/menu.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/menu_downarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/menu_rightarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/menu_sep.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/menu_split_downarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/messager_error.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/messager_info.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/messager_question.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/messager_warning.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/pagination_first.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/pagination_last.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/pagination_load.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/pagination_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/pagination_next.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/pagination_prev.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/panel_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/panel_title.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/panel_tool_collapse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/panel_tool_expand.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/panel_tools.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/spinner_arrow_down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/spinner_arrow_up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tabs_close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tabs_enabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tabs_leftarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tabs_rightarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_arrows.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_checkbox_0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_checkbox_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_checkbox_2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_dnd_no.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_dnd_yes.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_file.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_folder.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_folder_open.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/tree_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/validatebox_pointer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/images/validatebox_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/layout.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/linkbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/menubutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/messager.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/pagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/panel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/propertygrid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/spinner.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/splitbutton.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/tree.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/validatebox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/gray/window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icon.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/back.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/cut.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/edit_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/edit_remove.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/filesave.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/no.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/ok.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/pencil.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/print.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/redo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/reload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/sum.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/themes/icons/undo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/models.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Input/db.json" afterPath="$PROJECT_DIR$/libs/db.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/models/requestHandlers.js" afterPath="$PROJECT_DIR$/models2/requestHandlers.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/GeneralPartials/error.ejs" afterPath="$PROJECT_DIR$/views/error.ejs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/menu.ejs" afterPath="$PROJECT_DIR$/views/old/menu.ejs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/record.ejs" afterPath="$PROJECT_DIR$/views/old/record.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/dataWrapper.js" afterPath="$PROJECT_DIR$/models/dataWrapper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cards.ejs" afterPath="$PROJECT_DIR$/views/cards.ejs" />
     </list>
     <ignored path="betterFlashCards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,30 +897,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/GeneralPartials/index.ejs">
+      <file leaf-file-name="teacher.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/teacher.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.617647">
-              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state vertical-scroll-proportion="-13.970589">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/GeneralPartials/error.ejs">
+      <file leaf-file-name="cards.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/cards.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.14144272">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/GeneralPartials/profile.ejs">
+      <file leaf-file-name="CardView.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/CardPartials/CardView.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -69,56 +937,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/GeneralPartials/signup.ejs">
+      <file leaf-file-name="CardManage.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/CardPartials/CardManage.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.764706">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1691177">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#2207#5768#0" expanded="false" />
-                <element signature="e#5800#7311#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cards.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/cards.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7352941">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subapi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/subapi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-              <folding>
-                <marker date="1452769426942" expanded="true" signature="0:1" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/GeneralPartials/login.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.558824">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,7 +958,6 @@
         <option value="$PROJECT_DIR$/routes/subapi" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/models/JSONAPI.js" />
-        <option value="$PROJECT_DIR$/models/dataWrapper.js" />
         <option value="$PROJECT_DIR$/views2/teacher.ejs" />
         <option value="$PROJECT_DIR$/views2/teacher.html" />
         <option value="$PROJECT_DIR$/views2/menu.ejs" />
@@ -149,6 +971,10 @@
         <option value="$PROJECT_DIR$/routes/subapi.js" />
         <option value="$PROJECT_DIR$/controllers/cards.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/models/models.js" />
+        <option value="$PROJECT_DIR$/views/cards.ejs" />
+        <option value="$PROJECT_DIR$/views/old/menu.ejs" />
+        <option value="$PROJECT_DIR$/models/dataWrapper.js" />
       </list>
     </option>
   </component>
@@ -234,7 +1060,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="GeneralPartials" />
+              <option name="myItemId" value="TeacherPartials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="betterFlashCards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="betterFlashCards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CardPartials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -290,6 +1134,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="betterFlashCards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="betterFlashCards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -311,6 +1169,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs" />
+      <recent name="$PROJECT_DIR$/views/old" />
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/models2" />
       <recent name="$PROJECT_DIR$/views/GeneralPartials" />
     </key>
   </component>
@@ -399,7 +1261,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19353099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22708757" sideWeight="0.48301888" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21486762" sideWeight="0.4787062" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21486762" sideWeight="0.4787062" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21486762" sideWeight="0.5212938" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -524,40 +1386,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dataWrapper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2207#5768#0" expanded="false" />
-            <element signature="e#5800#7311#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/JSONAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models2/models.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -602,8 +1430,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2207#5768#0" expanded="false" />
-            <element signature="e#5800#7311#0" expanded="false" />
+            <element signature="e#2208#5769#0" expanded="false" />
+            <element signature="e#5801#7312#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -659,8 +1487,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
           <folding>
-            <element signature="e#2207#5768#0" expanded="false" />
-            <element signature="e#5800#7311#0" expanded="false" />
+            <element signature="e#2208#5769#0" expanded="false" />
+            <element signature="e#5801#7312#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -709,8 +1537,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
-            <element signature="e#2207#5768#0" expanded="false" />
-            <element signature="e#5800#7311#0" expanded="false" />
+            <element signature="e#2208#5769#0" expanded="false" />
+            <element signature="e#5801#7312#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -759,23 +1587,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
-            <element signature="e#2207#5768#0" expanded="false" />
-            <element signature="e#5800#7311#0" expanded="false" />
+            <element signature="e#2208#5769#0" expanded="false" />
+            <element signature="e#5801#7312#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/JSONAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42645073">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Input/SV-2x1 en.srt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -801,56 +1615,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/record.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/menu.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21216407">
-          <caret line="6" column="81" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42432815">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models2/models.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models2/mongoAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="29" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!block;n#curriculasList#0" expanded="false" />
-            <element signature="e#347#536#0" expanded="false" />
-            <element signature="n#!!block;n#categorysList#0" expanded="false" />
-            <element signature="n#!!block;n#cardsById#0" expanded="false" />
-            <element signature="n#!!block;n#cardsByCategory#0" expanded="false" />
-            <element signature="n#!!block;n#categorysByCurricula#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/requestHandlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -867,30 +1635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dataWrapper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/teacher.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7352941">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/GeneralPartials/error.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -921,22 +1665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cards.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7352941">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/GeneralPartials/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.617647">
@@ -953,14 +1681,167 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/JSONAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models2/mongoAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#curriculasList#0" expanded="false" />
+            <element signature="e#347#536#0" expanded="false" />
+            <element signature="n#!!block;n#categorysList#0" expanded="false" />
+            <element signature="n#!!block;n#cardsById#0" expanded="false" />
+            <element signature="n#!!block;n#cardsByCategory#0" expanded="false" />
+            <element signature="n#!!block;n#categorysByCurricula#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1691177">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.4754095">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
           <folding>
-            <element signature="e#2207#5768#0" expanded="false" />
-            <element signature="e#5800#7311#0" expanded="false" />
+            <element signature="e#2208#5769#0" expanded="false" />
+            <element signature="e#5801#7312#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models2/requestHandlers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models2/models.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/TeacherPartials/subEditor.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/old/record.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.029411">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/error.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2058823">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/old/menu.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6734007">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1452772677446" expanded="true" signature="1476:1503" placeholder="{...}" />
+            <marker date="1452772677446" expanded="true" signature="1633:1741" placeholder="{...}" />
+            <marker date="1452772677446" expanded="true" signature="1760:1820" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/TeacherPartials/MovieList.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38896745">
+          <caret line="761" column="18" selection-start-line="761" selection-start-column="18" selection-end-line="761" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dataWrapper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33738193">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/teacher.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.970589">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/cards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/CardPartials/CardView.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/CardPartials/CardManage.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cards.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14144272">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
