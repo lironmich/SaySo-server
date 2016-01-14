@@ -120,8 +120,8 @@ function cardsById(res, id){
 
 // find category id by name
 
-// get cards by category id
-function cardsByCategory(res, id){
+// get cards by category id	???
+function cardsByCategory(res, id){ 		// ???
 	var oid = mongoose.Types.ObjectId(id);
 
 
@@ -148,7 +148,7 @@ function cardsByCategory(res, id){
 			});
 }
 
-// get categorys by curicula
+// get categorys by curicula ???
 function categorysByCurricula(res, id){		// ????
 
 	var oid = mongoose.Types.ObjectId(id)
@@ -179,7 +179,7 @@ function categorysByCurricula(res, id){		// ????
 
 
 
-// get movie list
+// get movie list stub Initial
 function clipList(res){
 	var list = [{
 		name : "movie1",
@@ -193,7 +193,6 @@ function clipList(res){
 	}];
 
 	res.json(list);
-}
 
 // add / update clip
 
@@ -228,6 +227,8 @@ function clipList(res){
 	// save to db
 
 //};
+}
+
 
 
 // say so

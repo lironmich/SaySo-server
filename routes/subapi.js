@@ -33,9 +33,9 @@ module.exports = function(app, passport) {
         })
 
     app.get('/tester', function(req, res) {
-
+        res.render('cards.ejs');
         // res.json(blocks);
-        mongodata.Tester(res);
+        // mongodata.Tester(res);
     });
 
     app.get('/cliplist', function(req, res) {
