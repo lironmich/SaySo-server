@@ -180,29 +180,31 @@ function categorysByCurricula(res, id){		// ????
 
 
 // get movie list stub Initial
-function clipList(res){
+function clipList(res) {
 	var list = [{
-		name : "movie1",
-		provider : "movie2",
-		link : "url//blala",
-		},
-	{
-		name : "movie2222",
-		provider : "movie222222222",
-		link : "url//blalablalablala",
-	}];
+		name: "movie1",
+		provider: "movie2",
+		link: "url//blala",
+	},
+		{
+			name: "movie2222",
+			provider: "movie222222222",
+			link: "url//blalablalablala",
+		}];
 
 	res.json(list);
-
+}
 // add / update clip
 
 // get clip
-//
-//var convertSub = function(){
-//	console.log("converting subtitles");
-//
-//	// open files
-//	var en =fs.readFileSync('./Input/SV-2x1 en.srt', "utf-8");
+
+function parseFiles(res) {
+
+	var en = fs.readFileSync('./libs/1.srt', "utf-8");
+	var j;
+
+	res.json ("");
+
 //	//var fr =fs.readFileSync('./Input/SV-2x1 fr.srt', "utf-8");
 //	//var pt =fs.readFileSync('./Input/SV-2x1 pt.srt', "utf-8");
 //
@@ -217,17 +219,19 @@ function clipList(res){
 //			var i=0;
 //		}
 //	}
-	// for line in ens
-	// if block number create block
-	// if 2 lines of subtitles split time and add block
-	// insert timestamp : text for 1 or 2 blocks
+		// for line in ens
+		// if block number create block
+		// if 2 lines of subtitles split time and add block
+		// insert timestamp : text for 1 or 2 blocks
 
-	// var t=1;
+		// var t=1;
 
-	// save to db
+		// save to db
+	}
 
-//};
-}
+
+
+
 
 
 
@@ -244,3 +248,5 @@ exports.categorysByCurricula = categorysByCurricula;
 exports.cardsList = cardsList;
 exports.cardsByCategory = cardsByCategory;
 exports.cardsById = cardsById;
+
+exports.parsefiles = parseFiles;

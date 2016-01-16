@@ -29,7 +29,7 @@ module.exports = function(app, passport) {
 
 
     app.get('/tester', function(req, res) {
-        res.render('cards.html');
+        res.render('cards.ejs');
         // res.json(blocks);
         // mongodata.Tester(res);
     });
@@ -38,13 +38,16 @@ module.exports = function(app, passport) {
 
     // get / set movie = movie=id / new
 
+    app.get('/parsesrt'), function(req, res) {
+        mongodata.parsefiles(res);
+    }
     app.get('/cliplist', function(req, res) {
         mongodata.clipList(res);
     });
 
     app.route('/teacher')
         .get (function(req, res) {
-            res.render('teacher.html');
+            res.render('teacher.ejs');
         })
 
 

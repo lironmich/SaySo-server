@@ -24,24 +24,24 @@
 <div class="container" id="main">
     <!-- angular templating -->
     <!-- this is where content will be injected -->
-    <div class="ng-view"></div>
-    <!--<div class="container" ng-controller="cardTableView">-->
-        <!--<h1>Cards full list</h1>-->
-        <!--<table class="table">-->
-            <!--<thead>-->
-            <!--<tr>-->
-                <!--<th>Name</th>-->
-                <!--<th>Category</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody>-->
-            <!--<tr ng-repeat="card in list">-->
-                <!--<td>{{card.name}}</td>-->
-                <!--<td>{{card.subcategory[0].symbol}}</td>-->
-            <!--</tr>-->
-            <!--</tbody>-->
-        <!--</table>-->
-    <!--</div>-->
+
+    <div class="container" ng-controller="cardTableView">
+        <h1>Cards full list</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="card in list">
+                <td>{{card.name}}</td>
+                <td>{{card.subcategory[0].symbol}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
 </div>
 
