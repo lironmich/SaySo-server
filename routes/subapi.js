@@ -27,23 +27,25 @@ var mongodata = require('../models2/mongoAPI');
 module.exports = function(app, passport) {
 
 
-    app.route('/teacher')
-        .get (function(req, res) {
-            res.render('teacher.ejs');
-        })
 
     app.get('/tester', function(req, res) {
-        res.render('cards.ejs');
+        res.render('cards.html');
         // res.json(blocks);
         // mongodata.Tester(res);
     });
+
+
+
+    // get / set movie = movie=id / new
 
     app.get('/cliplist', function(req, res) {
         mongodata.clipList(res);
     });
 
-    // get / set movie = movie=id / new
-
+    app.route('/teacher')
+        .get (function(req, res) {
+            res.render('teacher.html');
+        })
 
 
     // full movie

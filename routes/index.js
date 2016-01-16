@@ -33,6 +33,17 @@ module.exports = function(app, passport) {
 		RequestHandler.defaultHandler(res, path);
 	});
 
+	app.get('/node_modules/*', function(req, res) {
+		var path = "." + url.parse(req.url).pathname;
+		RequestHandler.defaultHandler(res, path);
+	});
+
+	app.get('/views/*', function(req, res) {
+		var path = "." + url.parse(req.url).pathname;
+		RequestHandler.defaultHandler(res, path);
+	});
+
+
 
 	// cards mongo API
 
@@ -47,23 +58,24 @@ module.exports = function(app, passport) {
 	// 127.00.1:8888/categorys/curiculum5687dfdc4983004b2dc62ad0
 	app.get('/api/categorys/curiculum:curiculumid', function(req, res) { // New Mongo !!
 		mongodata.categorysByCurricula(res, req.params.curiculumid);
-		console.log('req.params.curiculumid  ' + req.params.curiculumid);
+		console.log('/api/categorys/curiculum:curiculumid : req.params.curiculumid  ' + req.params.curiculumid);
 	});
 
 	app.get('/api/listallcards', function(req, res) { // New Mongo ??
+		console.log('/api/listallcards ');
 		mongodata.cardsList(res);
 	});
 
 	// 127.00.1:8888/cardslist/category5687dfdc4983004b2dc62ad1
 	app.get('/api/cards/category:categoryid', function(req, res) { // New Mongo ??
 		mongodata.cardsByCategory(res, req.params.categoryid);
-		console.log ('req.params.categoryid  ' + req.params.categoryid);
+		console.log ('/api/cards/category:categoryid req.params.categoryid  ' + req.params.categoryid);
 	});
 
 	// 127.00.1:8888/cardslist/card5687dfdc4983004b2dc62ade
 	app.get('/api/cards/card:cardid', function(req, res) { // New Mongo ??
 		mongodata.cardsById(res, req.params.cardid);
-		console.log ('req.params.cardid  ' + req.params.cardid);
+		console.log ('/api/cards/card:cardid : req.params.cardid  ' + req.params.cardid);
 	});
 
 	function oldCard() {

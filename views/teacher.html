@@ -1,8 +1,10 @@
 <!DOCTYPE>
-<html ng-app="cardsApp">
+<html ng-app="teacherApp">
 
 <head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -16,28 +18,43 @@
 <p></p>
 
 <div class="container">
-    <div class="container" ng-controller="tableManage">
-        <h1>Cards full list</h1>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Category</th>
+
+<input ng-model="test"></input>
+{{test}}
+
+<div class="container" ng-controller="tableManage">
+    <h1>Movie list</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Provider</th>
+            <th>Link</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="movie in list">
+                <td>{{movie.name}}</td>
+                <td>{{movie.provider}}</td>
+                <td>{{movie.link}}</td>
             </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="card in list">
-                <td>{{card.name}}</td>
-                <td>{{card.subcategory[0].symbol}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+        </tbody>
+    </table>
+</div>
 
 </div>
 
+<!--<div>-->
+<!--<select>-->
+    <!--<option value="en">en</option>-->
+    <!--<option value="he">he</option>-->
+<!--</select>-->
+
+<!--<input type="file"></input>-->
+<!--</div>-->
+
 <script src="/libs/angular.1.5.0.min.js"></script>
-<script src="/controllers/cards.js"></script>
+<script src="/controllers/teacerInt.js"></script>
 
 </body>
 </html>
