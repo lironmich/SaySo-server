@@ -121,13 +121,13 @@ function cardsById(res, id){
 // find category id by name
 
 // get cards by category id	???
-function cardsByCategory(res, id){ 		// ???
+function cardsByCategory(res, id){
 	var oid = mongoose.Types.ObjectId(id);
 
 
 	var getCards = function (){
 		var deferred = Q.defer();
-		card.find({"subcategory" : { "_id": "5687dfdc4983004b2dc62ad0" }}, function(err, car){          //  ????
+		card.find({"subcategory._id": oid }, function(err, car){
 			if (err) {deferred.reject(err)}
 			else{
 				deferred.resolve( car);
@@ -148,13 +148,13 @@ function cardsByCategory(res, id){ 		// ???
 			});
 }
 
-// get categorys by curicula ???
-function categorysByCurricula(res, id){		// ????
+// get categorys by curicula
+function categorysByCurricula(res, id){
 
 	var oid = mongoose.Types.ObjectId(id)
 	var getCards = function (){
 		var deferred = Q.defer();
-		category.find({"_id": id}, function(err, car){
+		category.find({"curricula._id": oid}, function(err, car){
 			if (err) {deferred.reject(err)}
 			else{
 				deferred.resolve( car);
@@ -174,8 +174,6 @@ function categorysByCurricula(res, id){		// ????
 				res.json(error);
 			});
 }
-
-
 
 
 
@@ -204,6 +202,7 @@ function parseFiles(res) {
 	var j;
 
 	res.json ("");
+}
 
 //	//var fr =fs.readFileSync('./Input/SV-2x1 fr.srt', "utf-8");
 //	//var pt =fs.readFileSync('./Input/SV-2x1 pt.srt', "utf-8");
@@ -227,7 +226,6 @@ function parseFiles(res) {
 		// var t=1;
 
 		// save to db
-	}
 
 
 

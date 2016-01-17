@@ -27,8 +27,6 @@ var subcategorySchema = new Schema({
   symbol: String, 
 });
 
-
-
 var cardSchema = new Schema({
   name: String,
   subcategory: [subcategorySchema],
@@ -54,12 +52,25 @@ var movieSchema = new Schema({
   name: String,
   provider: String, // maybe schema?
   link: String,
+  source_lan: [languageSchema],
 });
 
+var subScema = new Schema({
+  block_number: NumberInt,
+  dest_lan: String,
+  dest_lan_id : [languageSchema],
+  dest_transcript: String,
+  source_lan: String,
+  start_time: String,
+  end_time: String,
+});
 
 var subtitlesSchema = new Schema({
-  movie: [movieSchema],
-  subs : Object,
+  movie : [movieSchema],
+  subs  : [{
+    language: [languageSchema],
+    sub: [subScema],
+  }]
 });
 
 //[
