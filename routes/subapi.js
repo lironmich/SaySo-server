@@ -18,14 +18,13 @@
  blocks[2] = {'en' : sub3, 'heb' : heb3,  couplings : [ ["שורה", "line", "shura"], ["second", "שלישית", "shlishit"] ]  };
 
 
-var mongodata = require('../models2/mongoAPI');
+var mongodata = require('../models/mongoAPI');
 //var api = require('./api');
 //var JSONAPI = require('../models/JSONAPI');
-//var models = require('../models2/models');
+//var models = require('../models/models');
 //var util = require('util');
 
 module.exports = function(app, passport) {
-
 
 
     app.get('/tester', function(req, res) {
@@ -34,13 +33,11 @@ module.exports = function(app, passport) {
         // mongodata.Tester(res);
     });
 
-
-
     // get / set movie = movie=id / new
 
-    app.get('/parsesrt'), function(req, res) {
+    app.get('/parsesrtmock', function(req, res) {
         mongodata.parsefiles(res);
-    }
+    });
     app.get('/cliplist', function(req, res) {
         mongodata.clipList(res);
     });

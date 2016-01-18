@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var RequestHandler = require('../models2/requestHandlers')
+var RequestHandler = require('../models/requestHandlers')
 var url = require('url');
-var data = require('../models/dataWrapper');
-var mongodata = require('../models2/mongoAPI');
-var subapi = require('./subapi');
-var JSONAPI = require('../models/JSONAPI');
-var models = require('../models2/models');
+var mongodata = require('../models/mongoAPI');
+
+//var subapi = require('./subapi');
+//var models = require('../models/models');
 
 var util = require('util');
 
@@ -44,7 +43,6 @@ module.exports = function(app, passport) {
 	});
 
 
-
 	// cards mongo API
 
 	app.get('/api/listcurriculums', function(req, res) { // New Mongo ??
@@ -66,7 +64,7 @@ module.exports = function(app, passport) {
 		mongodata.cardsList(res);
 	});
 
-	// 127.00.1:8888/api/cards/5687dfdc4983004b2dc62ad1
+	// http://127.00.1:8888/api/cards/category/569b93d0e298eb9931bc9d23
 	app.route('/api/cards/category/:categoryid')
 		.get(function(req, res) {
 			mongodata.cardsByCategory(res, req.params.categoryid);
@@ -75,7 +73,6 @@ module.exports = function(app, passport) {
 
 	// 127.00.1:8888/cardslist/card5687dfdc4983004b2dc62ade
 	app.route('/api/cards/card:cardid')
-
 		.get(function(req, res) {
 			mongodata.cardsById(res, req.params.cardid);
 			console.log ('/api/cards/card:cardid : req.params.cardid  ' + req.params.cardid);
@@ -276,7 +273,7 @@ module.exports = function(app, passport) {
 		//	res.redirect('/');
 		//}
 		//
-		//app.get('/db.json', function(req, res) {
+		//app.get('/carddb.json', function(req, res) {
 		//	res.json(data.MenuTreeGet()); // change to api call
 		//});
 
