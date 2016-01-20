@@ -9,7 +9,9 @@ function mongoInit(){
   });
 }
 
-mongoose.connect('mongodb://localhost/cards');
+mongoose.connect('mongodb://razawirazawi:Aq123456@ds047355.mongolab.com:47355/saysoalfa');
+
+//mongoose.connect('mongodb://localhost/cards');
 var Schema = mongoose.Schema;
 
 // Cards
@@ -48,6 +50,7 @@ var movieSchema = new Schema({
   provider: String, // maybe schema?
   link: String,
   source_lan: [languageSchema],
+  dest_lans: [languageSchema],
   Img: String,
 });
 
@@ -57,6 +60,12 @@ var srtBlockSchema = new Schema({
   endTime: String,
   text: String,
 });
+
+// add a virtual that returns startTime-->endTime
+srtBlockSchema.virtual('time')
+    .get( function () {
+        return this.startTime + '-->' + this.endTime;
+    });
 
 var saySoBlockSchema = new Schema({
   source_lan : [srtBlockSchema],      // block
@@ -70,7 +79,8 @@ var saySoBlockSchema = new Schema({
 
 var movieSubtitlesSchema = new Schema({
   movie : [movieSchema],
-  subs  : [{ type : mongoose.Schema.ObjectId, ref: 'SaySoBlock' }], // array   ????
+  lan: [languageSchema],
+  subs  : [saySoBlockSchema], // array
 });
 
 // Decs
@@ -79,13 +89,13 @@ var Movie = mongoose.model('Movie', movieSchema);
 var Language = mongoose.model('Language', languageSchema);
 var SrtBlock = mongoose.model('SrtBlock', srtBlockSchema);
 var SaySoBlock = mongoose.model('SaySoBlock', saySoBlockSchema);
-var MovieSubtitle = mongoose.model('MovieSubtitles', movieSubtitlesSchema);
+var MovieSubtitles = mongoose.model('MovieSubtitles', movieSubtitlesSchema);
 
 exports.Movie = Movie;
 exports.Language = Language;
 exports.SrtBlock = SrtBlock;
 exports.SaySoBlock = SaySoBlock;
-exports.MovieSubtitle = MovieSubtitle;
+exports.MovieSubtitles = MovieSubtitles;
 
 // Card decks
 

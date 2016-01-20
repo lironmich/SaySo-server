@@ -15,7 +15,7 @@ var movie = models.Movie;
 var language = models.Language;
 var srtblock = models.SrtBlock;
 var saysoblock = models.SaySoBlock;
-var moviesubtitles = models.MovieSubtitle;
+var moviesubtitles = models.MovieSubtitles;
 
 
 // get cards by curriculas
@@ -34,13 +34,13 @@ function curriculasList(res){
 	};
 
 	getCuriculas()
-		.then(function(data){
-			console.log(data);
-			res.json(data);
-		})
-		.catch(function(error){
-			res.json(error);
-		});
+			.then(function(data){
+				console.log(data);
+				res.json(data);
+			})
+			.catch(function(error){
+				res.json(error);
+			});
 }
 
 // get cards by Subcategory
@@ -180,34 +180,7 @@ function categorysByCurricula(res, id){
 			});
 }
 
-// SaySo
 
-function parseFiles(res) {
-
-	InitializeDb();
-	res.json("");
-
-	//var getMovieSub = function (){
-	//	var deferred = Q.defer();
-	//	moviesubtitles.find({}, function(err, sub){ // "movie.name": "SV1"
-	//		if (err) {deferred.reject(err)}
-	//		else{
-	//			deferred.resolve( sub);
-	//		}
-	//	})
-	//	return deferred.promise;
-	//};
-
-	//getMovieSub()
-	//		.then(function(data){
-	//			console.log("getMovieSub");
-	//			res.json(data);
-	//		})
-	//		.catch(function(error){
-	//			console.log(error);
-	//			res.json(error);
-	//		});
-}
 
 
 // get movie list stub Initial
@@ -225,15 +198,22 @@ function clipList(res) {
 
 	res.json(list);
 }
+
 // add / update clip
 
 // get clip
 
+function getMovieByName(name) {
+
+}
+
+function getMovieByID(id) {
+
+}
 
 
 // say so
 exports.clipList = clipList;
-exports.parsefiles = parseFiles;
 
 // flash cards
 exports.curriculasList = curriculasList;
@@ -246,17 +226,82 @@ exports.cardsList = cardsList;
 exports.cardsByCategory = cardsByCategory;
 exports.cardsById = cardsById;
 
+// say so mocks
+exports.InitDBMocks = InitDBMocks;
+exports.viewFiles = viewFiles;
 
-function InitializeDb(){
 
-	 //InitSaySoDb();
-	 //InitCardsDb();
-	 parseSV2x1();
+// SaySo mocks makers
 
+function InitDBMocks(res) {
+
+	parseSV2x1();
+	InitCardsDb();
+	res.json("Initing DB");
 }
 
+function viewFiles(res) {
+
+	var getMovieSub = function (){
+		var deferred = Q.defer();
+		moviesubtitles.find({}, function(err, sub){
+			if (err) {deferred.reject(err)}
+			else{
+				deferred.resolve( sub);
+			}
+		})
+		return deferred.promise;
+	};
+
+	getMovieSub()
+			.then(function(data){
+				console.log("getMovieSub");
+				res.json(data);
+			})
+			.catch(function(error){
+				console.log(error);
+				res.json(error);
+			});
+}
 
 function parseSV2x1() {
+
+	lan = models.Language;
+	lansData = [{symbol : 'en', name : 'English'},
+		{symbol : 'sp', name : 'Spanish'},
+		{symbol : 'pt', name : 'Portuguese'},
+		{symbol : 'ar', name : 'Arabic'},
+		{symbol : 'he', name : 'Hebrew'},
+		{symbol : 'de', name : 'German'},
+		{symbol : 'el', name : 'Greek'},
+		{symbol : 'fr', name : 'French'},
+		{symbol : 'ru', name : 'Russian'},
+		{symbol : 'ja', name : 'Japanese'},
+		{symbol : 'zh', name : 'Chinese'},
+		{symbol : 'nl', name : 'Dutch'},
+		{symbol : 'da', name : 'Danish'},
+		{symbol : 'fi', name : 'Finnish'}
+	];
+
+	console.log('InitSaySoDb() {');
+
+	lansdoc = [];
+	lansData.forEach(function(el){
+		lang = new lan(el)
+		lansdoc.push(lang);
+	});
+
+	mov = models.Movie;
+	moviesData = [{name : "movie1", provider : "provider", link : "link", Img : "img", source_lan : lansdoc[0]},
+		{name : "movie2222", provider : "provider2222", link : "link222", Img : "img22", source_lan : lansdoc[0]},
+		{name : "movie333", provider : "provider333", link : "link333", Img : "img33", source_lan : lansdoc[0]},
+	];
+
+	moviesDoc =[];
+	moviesData.forEach(function(el) {
+		movie = new mov(el);
+		moviesDoc.push(movie);
+	});
 
 	var filesrtsp = fs.readFileSync('libs/sv2x1.srt', "utf-8"); // spanish
 	var filesrten = fs.readFileSync('libs/sv2x2.srt', "utf-8"); // english
@@ -274,142 +319,127 @@ function parseSV2x1() {
 
 	en.forEach(function(el) {
 		bl = new srtb(el);
-		bl.save(function(err) {
-			if (err) throw err;
-			console.log('en block created! ');
-		});
-		//.then(function() {
-		//	ens[parseInt(bl.id)] = bl;
-		//});
+		ens[parseInt(bl.id)] = bl;
 	});
 
 	sp.forEach(function(el) {
 		sl = new srtb(el);
-		sl.save(function(err) {
-			if (err) throw err;
-			console.log('sp block created! ');
-		});
-		//.then(function() {
-		//	sps[parseInt(sl.id)] = sl;
-		//});
+		sps[parseInt(sl.id)] = sl;
 	});
 
 	pt.forEach(function(el) {
-		pl = new srtb(el);
+		sl = new srtb(el);
+		pts[parseInt(sl.id)] = sl;
+	});
 
-		pl.save(function(err) {
+	var dstlans = [lansdoc[1] , lansdoc[2]];
+	movieDoc = new models.Movie({name : "SV1", provider : "provider333", link : "link333", Img : "img33",
+		source_lan : lansdoc[0], dest_lans : dstlans});
+
+	var len = Math.max(ens.length, sps.length);
+
+	var spens = [];
+
+	for (i = 0; i < len; i++) {
+		var spen = new saysoblock;
+		spen.source_lan = ens[i];
+		spen.dest_lan_block = sps[i];
+		spen.trans_block = {};
+		spen.block_no = i;
+		spen.dest_couplings = {};
+		spen.trance_couplings = {};
+		spens.push(spen);
+	}
+
+	var len2 = Math.max(ens.length, pts.length);
+
+	var ptens = [];
+	for (i = 0; i < len2; i++) {
+		var pten = new saysoblock;
+		pten.source_lan = ens[i];
+		pten.dest_lan_block = sps[i];
+		pten.trans_block = {};
+		pten.block_no = i;
+		pten.dest_couplings = {};
+		pten.trance_couplings = {};
+		// mvsubs.subs.body.push(spen);
+		ptens.push(pten);
+	}
+
+
+	var mvsubssp = new models.MovieSubtitles({
+		movie : movieDoc,
+		lan : lansdoc[1],
+		subs : spens,
+	});
+
+	var mvsubspt = new models.MovieSubtitles({
+		movie : movieDoc,
+		lan : lansdoc[2],
+		subs : ptens,
+	});
+
+
+	lansdoc.forEach(function(el) {
+		el.save(function(err) {
 			if (err) throw err;
-			console.log('pt block created! ');
+			console.log('sayso lansdoc created! ');
 		});
-		//		.then(function() {
-		//	pts[parseInt(pl.id)] = pl;
-		//});
 	});
 
-
-	// dependent on movie
-	//movie.find({name : "SV1"}, function(err, mv) { // get as var
-    //
-	//	mvsubs = new moviesubtitles;
-	//	mvsubs.movie = mv;
-    //
-	//	language.find({symbol : 'sp'}, function(err, spLang){ // get as var
-	//		if (err) {deferred.reject(err)}
-	//		else {
-	//			var len = Math.max(ens.length, sps.length);
-    //
-	//			for (i = 0; i < len; i++) {
-    //
-	//				var spen = new saysoblock({
-	//					source_lan : ens[i], dest_lan_id : spLang, dest_lan_block : sps[i] , trans_block : {}, block_no : i,
-	//					dest_couplings  : {}, trance_couplings  : {},
-	//				});
-    //
-	//				spen.save(function(err) {
-	//					if (err) throw err;
-	//					console.log('sayso block created! ');
-	//				});
-	//				mvsubs.subs.push(spen)
-	//				mvsubs.save(function(err) {
-	//					if (err) throw err;
-	//					console.log('mvsubs updated with sayso block! ');
-	//				});
-	//			}
-	//		}
-	//	});
-    //
-	//	language.find({symbol : 'pt'}, function(err, ptLang){ // get as var
-	//		if (err) {deferred.reject(err)}
-	//		else {
-	//			var len = Math.max(ens.length, pts.length);
-    //
-	//			for (i = 0; i < len; i++) {
-    //
-	//				var spen = new saysoblock({
-	//					source_lan : ens[i], dest_lan_id : ptLang, dest_lan_block : pts[i] , trans_block : {}, block_no : i,
-	//					dest_couplings  : {}, trance_couplings  : {},
-	//				});
-    //
-	//				spen.save(function(err) {
-	//					if (err) throw err;
-	//					console.log('sayso block created! ');
-	//				});
-	//				mvsubs.subs.push(spen)
-	//				mvsubs.save(function(err) {
-	//					if (err) throw err;
-	//					console.log('mvsubs updated with sayso block!');
-	//				});
-	//			}
-	//		}
-	//	});
-	//});
-}
-
-
-function InitSaySoDb(){
-	lan = models.Language;
-	lans = [{symbol : 'en', name : 'English'},
-		{symbol : 'ar', name : 'Arabic'},
-		{symbol : 'he', name : 'Hebrew'},
-		{symbol : 'de', name : 'German'},
-		{symbol : 'el', name : 'Greek'},
-		{symbol : 'fr', name : 'French'},
-		{symbol : 'pt', name : 'Portuguese'},
-		{symbol : 'ru', name : 'Russian'},
-		{symbol : 'ja', name : 'Japanese'},
-		{symbol : 'zh', name : 'Chinese'},
-		{symbol : 'nl', name : 'Dutch'},
-		{symbol : 'da', name : 'Danish'},
-		{symbol : 'fi', name : 'Finnish'}
-	];
-
-	lans.forEach(function(el){
-			lang = new lan(el)
-			lang.save(function(err) {
-				if (err) throw err;
-				console.log('language created!');
-			});
+	moviesDoc.forEach(function(el) {
+		el.save(function(err) {
+			if (err) throw err;
+			console.log('sayso moviesDoc created! ');
+		});
 	});
 
-	language.find({symbol : 'en'}, function(err, enLan){
-		if (err) {deferred.reject(err)}
-		else{
-			mov = models.Movie;
-			movies = [{name : "movie1", provider : "provider", link : "link", Img : "img", source_lan : enLan},
-				{name : "movie2222", provider : "provider2222", link : "link222", Img : "img22", source_lan : enLan},
-				{name : "movie333", provider : "provider333", link : "link333", Img : "img33", source_lan : enLan},
-				{name : "SV1", provider : "provider333", link : "link333", Img : "img33", source_lan : enLan},
-			];
+	pts.forEach(function(el) {
+		el.save(function(err) {
+			if (err) throw err;
+			console.log('sayso pts created! ');
+		});
+	});
 
-			movies.forEach(function(el){
-				movie = new mov(el);
-				movie.save(function(err) {
-					if (err) throw err;
-					console.log('movie created!');
-				});
-			})
-		}
-	})
+	sps.forEach(function(el) {
+		el.save(function(err) {
+			if (err) throw err;
+			console.log('sayso sps created! ');
+		});
+	});
+
+	ens.forEach(function(el) {
+		el.save(function(err) {
+			if (err) throw err;
+			console.log('sayso eps created! ');
+		});
+	});
+
+	spens.forEach(function(el) {
+		el.save(function (err) {
+			if (err) throw err;
+			console.log('sayso spens created! ');
+		});
+	});
+
+	ptens.forEach(function(el) {
+		el.save(function (err) {
+			if (err) throw err;
+			console.log('sayso ptens created! ');
+		});
+	});
+
+	mvsubspt.save(function(err) {
+		if (err) throw err;
+		console.log('sayso mvsubspt created! ');
+	});
+
+	mvsubssp.save(function(err) {
+		if (err) throw err;
+		console.log('sayso mvsubssp created! ');
+	});
+	//  pts, sps, ens, spens, lansdoc, moviesDoc .save()
+
 }
 
 function InitCardsDb() {
@@ -445,7 +475,7 @@ function InitCardsDb() {
 				arabic.save(function(err) {
 					if (err) throw err;
 
-					console.log('Curriculum created!');
+					//console.log('Curriculum created!');
 				});
 			}
 
@@ -458,7 +488,7 @@ function InitCardsDb() {
 				lesson.save(function(err) {
 					if (err) throw err;
 
-					console.log('Lesson created!');
+					//console.log('Lesson created!');
 				});
 
 				categorys.push(lesson);
@@ -501,17 +531,14 @@ function InitCardsDb() {
 				word.save(function(err) {
 					if (err) throw err;
 
-					console.log('word created!');
+					// console.log('word created!');
 				});
 			}
-
 
 			if (typeof obj[i] == 'object') {
 				mapObjects(obj[i]);
 			}
-
 		}
-
 	}
 
 	mapObjects(jsondb);

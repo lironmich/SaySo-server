@@ -35,8 +35,12 @@ module.exports = function(app, passport) {
 
     // get / set movie = movie=id / new
 
+    app.get('/viewsrtmock', function(req, res) {
+        mongodata.viewFiles(res);
+    });
+
     app.get('/parsesrtmock', function(req, res) {
-        mongodata.parsefiles(res);
+        mongodata.InitDBMocks(res);
     });
     app.get('/cliplist', function(req, res) {
         mongodata.clipList(res);
