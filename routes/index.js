@@ -1,11 +1,7 @@
 var express = require('express');
-var router = express.Router();
 var RequestHandler = require('../models/requestHandlers')
 var url = require('url');
 var mongodata = require('../models/mongoAPI');
-
-//var subapi = require('./subapi');
-//var models = require('../models/models');
 
 var util = require('util');
 
@@ -53,7 +49,6 @@ module.exports = function(app, passport) {
 		mongodata.categorysList(res);
 	});
 
-	// 127.00.1:8888/api/categorys/5687dfdc4983004b2dc62ad0
 	app.get('/api/categorys/:curiculumid', function(req, res) { // New Mongo !!
 		mongodata.categorysByCurricula(res, req.params.curiculumid);
 		console.log('/api/categorys/curiculum:curiculumid : req.params.curiculumid  ' + req.params.curiculumid);
@@ -64,14 +59,12 @@ module.exports = function(app, passport) {
 		mongodata.cardsList(res);
 	});
 
-	// http://127.00.1:8888/api/cards/category/569b93d0e298eb9931bc9d23
 	app.route('/api/cards/category/:categoryid')
 		.get(function(req, res) {
 			mongodata.cardsByCategory(res, req.params.categoryid);
 			console.log ('/api/cards/category:categoryid req.params.categoryid  ' + req.params.categoryid);
 			})
 
-	// 127.00.1:8888/cardslist/card5687dfdc4983004b2dc62ade
 	app.route('/api/cards/card:cardid')
 		.get(function(req, res) {
 			mongodata.cardsById(res, req.params.cardid);
@@ -221,7 +214,6 @@ module.exports = function(app, passport) {
 		//	res.redirect('/menu');
 		//});
 	}
-
 
 	// Auth
 	function minAuth() {

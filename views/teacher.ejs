@@ -12,6 +12,8 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <script src="/node_modules/angular/angular.js"></script>
 </head>
 <body>
 <header></header>
@@ -30,17 +32,23 @@
             <th>Name</th>
             <th>Provider</th>
             <th>Link</th>
+            <th>source_lan</th>
+            <th>dest_lans</th>
         </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="movie in list">
+            <tr ng-repeat="movie in movielist">
                 <td>{{movie.name}}</td>
                 <td>{{movie.provider}}</td>
                 <td>{{movie.link}}</td>
+                <td>{{movie.source_lan}}</td>
+                <td>{{movie.dest_lans}}</td>
             </tr>
         </tbody>
     </table>
 </div>
+
+
 
 </div>
 
@@ -53,7 +61,6 @@
 <!--<input type="file"></input>-->
 <!--</div>-->
 
-<script src="/libs/angular.1.5.0.min.js"></script>
 <script src="/controllers/teacerInt.js"></script>
 
 </body>

@@ -19,10 +19,6 @@
 
 
 var mongodata = require('../models/mongoAPI');
-//var api = require('./api');
-//var JSONAPI = require('../models/JSONAPI');
-//var models = require('../models/models');
-//var util = require('util');
 
 module.exports = function(app, passport) {
 
@@ -52,18 +48,34 @@ module.exports = function(app, passport) {
         })
 
 
-    // full movie
-    // http://127.0.0.1:8888/movie/2424?lan1=he&lan2=en&lan3=tr
-    app.get('/movie/:movie_id', function(req, res) {
 
-        id = req.params.movie_id;
-        lan1 = req.query.lan1;
-        lan2 = req.query.lan2;
-        lan3 = req.query.lan3;
+    //  /dbapi/movies
+    app.route('/dbapi/languages')
+        .get (function(req, res) {
+            // No params
+            mongodata.getLanguages(req, res);
+        })
 
-        console.log("app.route('/movie/:Movie_id') : lan3 = " + lan3);
-        res.json(blocks);
-    });
+
+    //  /dbapi/movies
+    app.route('/dbapi/movies')
+        .get (function(req, res) {
+            // params category, source_language, dest_language
+            mongodata.getMovies(req, res);
+
+        })
+
+
+
+    // @params
+    // start_time : "dd:dd:dd,ddd"      || "00:00:00,000"
+    // end_time   : "dd:dd:dd,ddd" || start_time +4
+    app.route('/dbapi/moviesub/:id')
+        .get (function(req, res) {
+            console.log("'/dbapi/moviesub/:id");
+            mongodata.getMovieSub(req, res);
+        })
+        // .put .delete .update
 
 
     //  http://127.0.0.1:8888/teacher/movie/2424?lan1=he&lan2=en&lan3=tr

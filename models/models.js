@@ -9,9 +9,13 @@ function mongoInit(){
   });
 }
 
-mongoose.connect('mongodb://razawirazawi:Aq123456@ds047355.mongolab.com:47355/saysoalfa');
+// mongodb://<dbuser>:<dbpassword>@ds051625.mongolab.com:51625/sayso-dev
+mongoose.connect('mongodb://raz:razdev@ds051625.mongolab.com:51625/sayso-dev');
 
-//mongoose.connect('mongodb://localhost/cards');
+// mongoose.connect('mongodb://localhost/cards');
+
+
+
 var Schema = mongoose.Schema;
 
 // Cards
@@ -41,7 +45,7 @@ var cardSchema = new Schema({
 // SaySo
 
 var languageSchema = new Schema({
-  symbol : String,
+  symbol : String,    // maybe Enum
   name : String,
 });
 
@@ -51,13 +55,17 @@ var movieSchema = new Schema({
   link: String,
   source_lan: [languageSchema],
   dest_lans: [languageSchema],
-  Img: String,
+  imageUrl: String,
+  "level": Number,        // enum ?
+  "viewsCount": Number,
+  "likesCount": Number,
+  "category": String    // schema vs enum
 });
 
 var srtBlockSchema = new Schema({
   id: String,
-  startTime: String,
-  endTime: String,
+  startTime: Number, // in ms
+  endTime: Number,   // in ms
   text: String,
 });
 
@@ -78,8 +86,9 @@ var saySoBlockSchema = new Schema({
 });
 
 var movieSubtitlesSchema = new Schema({
-  movie : [movieSchema],
-  lan: [languageSchema],
+  movie : [movieSchema],  // TBD change from embedded document to document reference
+  // movie_Id : { type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }, ||  movieSchema
+  destlan: [languageSchema],
   subs  : [saySoBlockSchema], // array
 });
 

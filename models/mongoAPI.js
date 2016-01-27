@@ -181,8 +181,6 @@ function categorysByCurricula(res, id){
 }
 
 
-
-
 // get movie list stub Initial
 function clipList(res) {
 	var list = [{
@@ -230,38 +228,62 @@ exports.cardsById = cardsById;
 exports.InitDBMocks = InitDBMocks;
 exports.viewFiles = viewFiles;
 
+exports.getMovieSub = getMovieSub;
+exports.getMovies = getMovies;
+exports.getLanguages = getLanguages;
+
 
 // SaySo mocks makers
 
 function InitDBMocks(res) {
 
 	parseSV2x1();
-	InitCardsDb();
+	// InitCardsDb();
 	res.json("Initing DB");
+}
+
+function getMovieSub(req, res) {
+
+	lan_code = req.query.lancode || 'sp';
+	movie_id = req.params.id; // original movie_id + lancode = subtitle_movie_schema
+	start_time = req.query.start_time || 0;
+	end_time = req.query.end_time || 4*60*100;
+
+	// , startTime : start_time, endtTime : end_time
+	moviesubtitles.find({'destlan.symbol' : lan_code,
+						 'subs.source_lan.startTime' : { $gt : start_time, $lt : end_time}  }, function(err, sub) {
+		if (err) res.json.reject(err)
+	}).then(function(sub){
+		res.json(sub);
+	});
+}
+
+function getLanguages(req, res) {
+
+	language.find({}, function(err, lan) {
+		if (err) res.json.reject(err)
+	}).then(function(lan){
+		res.json(lan);
+	});
+}
+
+function getMovies(req, res) {
+// category, source_language, dest_language
+
+	movie.find({}, function(err, mov) {
+		if (err) res.json.reject(err)
+	}).then(function(mov){
+		res.json(mov);
+	});
 }
 
 function viewFiles(res) {
 
-	var getMovieSub = function (){
-		var deferred = Q.defer();
-		moviesubtitles.find({}, function(err, sub){
-			if (err) {deferred.reject(err)}
-			else{
-				deferred.resolve( sub);
-			}
-		})
-		return deferred.promise;
-	};
-
-	getMovieSub()
-			.then(function(data){
-				console.log("getMovieSub");
-				res.json(data);
-			})
-			.catch(function(error){
-				console.log(error);
-				res.json(error);
-			});
+		moviesubtitles.find({}, function(err, sub) {
+			if (err) res.json.reject(err)
+		}).then(function(err, sub){
+				res.json(err);
+		});
 }
 
 function parseSV2x1() {
@@ -307,9 +329,9 @@ function parseSV2x1() {
 	var filesrten = fs.readFileSync('libs/sv2x2.srt', "utf-8"); // english
 	var filesrtpt = fs.readFileSync('libs/sv2x3.srt', "utf-8"); // portuguese
 
-	var sp = srtp.parser.fromSrt(filesrtsp, false, true);
-	var en = srtp.parser.fromSrt(filesrten, false, true);
-	var pt = srtp.parser.fromSrt(filesrtpt, false, true);
+	var sp = srtp.parser.fromSrt(filesrtsp, true, true);
+	var en = srtp.parser.fromSrt(filesrten, true, true);
+	var pt = srtp.parser.fromSrt(filesrtpt, true, true);
 
 	srtb = models.SrtBlock;
 	var mvsubs;
@@ -369,13 +391,13 @@ function parseSV2x1() {
 
 	var mvsubssp = new models.MovieSubtitles({
 		movie : movieDoc,
-		lan : lansdoc[1],
+		destlan : lansdoc[1],
 		subs : spens,
 	});
 
 	var mvsubspt = new models.MovieSubtitles({
 		movie : movieDoc,
-		lan : lansdoc[2],
+		destlan : lansdoc[2],
 		subs : ptens,
 	});
 
@@ -394,40 +416,40 @@ function parseSV2x1() {
 		});
 	});
 
-	pts.forEach(function(el) {
-		el.save(function(err) {
-			if (err) throw err;
-			console.log('sayso pts created! ');
-		});
-	});
-
-	sps.forEach(function(el) {
-		el.save(function(err) {
-			if (err) throw err;
-			console.log('sayso sps created! ');
-		});
-	});
-
-	ens.forEach(function(el) {
-		el.save(function(err) {
-			if (err) throw err;
-			console.log('sayso eps created! ');
-		});
-	});
-
-	spens.forEach(function(el) {
-		el.save(function (err) {
-			if (err) throw err;
-			console.log('sayso spens created! ');
-		});
-	});
-
-	ptens.forEach(function(el) {
-		el.save(function (err) {
-			if (err) throw err;
-			console.log('sayso ptens created! ');
-		});
-	});
+	//pts.forEach(function(el) {
+	//	el.save(function(err) {
+	//		if (err) throw err;
+	//		console.log('sayso pts created! ');
+	//	});
+	//});
+    //
+	//sps.forEach(function(el) {
+	//	el.save(function(err) {
+	//		if (err) throw err;
+	//		console.log('sayso sps created! ');
+	//	});
+	//});
+    //
+	//ens.forEach(function(el) {
+	//	el.save(function(err) {
+	//		if (err) throw err;
+	//		console.log('sayso eps created! ');
+	//	});
+	//});
+    //
+	//spens.forEach(function(el) {
+	//	el.save(function (err) {
+	//		if (err) throw err;
+	//		console.log('sayso spens created! ');
+	//	});
+	//});
+    //
+	//ptens.forEach(function(el) {
+	//	el.save(function (err) {
+	//		if (err) throw err;
+	//		console.log('sayso ptens created! ');
+	//	});
+	//});
 
 	mvsubspt.save(function(err) {
 		if (err) throw err;
