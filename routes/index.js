@@ -23,6 +23,11 @@ module.exports = function(app, passport) {
 		RequestHandler.defaultHandler(res, path);
 	});
 
+	app.get('/libs/*', function(req, res) {
+		var path = "." + url.parse(req.url).pathname;
+		RequestHandler.defaultHandler(res, path);
+	});
+
 	app.get('/controllers/*', function(req, res) {
 		var path = "." + url.parse(req.url).pathname;
 		RequestHandler.defaultHandler(res, path);

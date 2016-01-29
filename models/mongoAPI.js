@@ -325,9 +325,9 @@ function parseSV2x1() {
 		moviesDoc.push(movie);
 	});
 
-	var filesrtsp = fs.readFileSync('libs/sv2x1.srt', "utf-8"); // spanish
-	var filesrten = fs.readFileSync('libs/sv2x2.srt', "utf-8"); // english
-	var filesrtpt = fs.readFileSync('libs/sv2x3.srt', "utf-8"); // portuguese
+	var filesrtsp = fs.readFileSync('res/sv2x1.srt', "utf-8"); // spanish
+	var filesrten = fs.readFileSync('res/sv2x2.srt', "utf-8"); // english
+	var filesrtpt = fs.readFileSync('res/sv2x3.srt', "utf-8"); // portuguese
 
 	var sp = srtp.parser.fromSrt(filesrtsp, true, true);
 	var en = srtp.parser.fromSrt(filesrten, true, true);
@@ -470,7 +470,7 @@ function InitCardsDb() {
 	var jsondb = "";
 
 	// console.log("InitJSONDB");
-	var dbsource =fs.readFileSync('libs/carddb.json', "utf-8");
+	var dbsource =fs.readFileSync('res/carddb.json', "utf-8");
 	jsondb = JSON.parse(dbsource.toString('utf8'));
 
 	var curricula = models.Curricula;
