@@ -2,6 +2,7 @@
 <html ng-app="teacherApp">
 
 <head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <!-- Latest compiled and minified CSS -->
@@ -13,11 +14,6 @@
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <script src="/node_modules/angular/angular.js"></script>
-    <script src="/node_modules/angular-route/angular-route.min.js"></script>
-    <script src="/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="/node_modules/angular-resource/angular-resource.min.js"></script>
-
-
 </head>
 <body>
 <header></header>
@@ -25,22 +21,22 @@
 
 <div class="container">
 
-    <input ng-model="test"></input>
-    {{test}}
+<input ng-model="test"></input>
+{{test}}
 
-    <div class="container" ng-controller="tableManage">
-        <h1>Movie list</h1>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Provider</th>
-                <th>Link</th>
-                <th>source_lan</th>
-                <th>dest_lans</th>
-            </tr>
-            </thead>
-            <tbody>
+<div class="container" ng-controller="tableManage">
+    <h1>Movie list</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Provider</th>
+            <th>Link</th>
+            <th>source_lan</th>
+            <th>dest_lans</th>
+        </tr>
+        </thead>
+        <tbody>
             <tr ng-repeat="movie in movielist">
                 <td>{{movie.name}}</td>
                 <td>{{movie.provider}}</td>
@@ -48,16 +44,24 @@
                 <td>{{movie.source_lan}}</td>
                 <td>{{movie.dest_lans}}</td>
             </tr>
-            </tbody>
-        </table>
-    </div>
+        </tbody>
+    </table>
+</div>
 
 
 
 </div>
 
+<!--<div>-->
+<!--<select>-->
+    <!--<option value="en">en</option>-->
+    <!--<option value="he">he</option>-->
+<!--</select>-->
 
-<script src="/public/apps/SaySo-teacher/controllers/teacerInt.js"></script>
+<!--<input type="file"></input>-->
+<!--</div>-->
+
+<script src="/controllers/teacerInt.js"></script>
 
 </body>
 </html>
