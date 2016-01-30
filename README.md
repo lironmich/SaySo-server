@@ -1,7 +1,10 @@
 
 # Installation Instruction
 1) clone project  
-  "git clone --recursive https://github.com/razawi/SaySo-server.git"
+for https
+  git clone --recursive https://github.com/razawi/SaySo-server.git
+or If you have ssh keys
+  git clone --recursive git@github.com:razawi/SaySo-server.git
   
 2) cd Into project  
 3)npm install  
