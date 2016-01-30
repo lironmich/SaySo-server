@@ -29,6 +29,18 @@ module.exports = function(app, passport) {
         // mongodata.Tester(res);
     });
 
+    app.get('/clientcontrol', function(req, res) {
+        res.render('client.ejs');
+        //  res.sendFile
+        // res.json(blocks);
+        // mongodata.Tester(res);
+    });
+
+    app.route('/teacher')
+        .get (function(req, res) {
+            res.render('teacher.ejs');
+        })
+
     // get / set movie = movie=id / new
 
     app.get('/viewsrtmock', function(req, res) {
@@ -42,10 +54,7 @@ module.exports = function(app, passport) {
         mongodata.clipList(res);
     });
 
-    app.route('/teacher')
-        .get (function(req, res) {
-            res.render('teacher.ejs');
-        })
+
 
 
 

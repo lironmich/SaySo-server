@@ -238,7 +238,7 @@ exports.getLanguages = getLanguages;
 function InitDBMocks(res) {
 
 	parseSV2x1();
-	// InitCardsDb();
+	InitCardsDb();
 	res.json("Initing DB");
 }
 
