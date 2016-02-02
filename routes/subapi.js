@@ -18,6 +18,97 @@
 // blocks[2] = {'en' : sub3, 'heb' : heb3,  couplings : [ ["שורה", "line", "shura"], ["second", "שלישית", "shlishit"] ]  };
 //
 
+var moviemock = [{
+    "imageUrl": "data/img/The Shawshank Redemption.jpg",
+    "movieName": "The Shawshank Redemption",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 1,
+    "viewsCount": 2577,
+    "likesCount": 185,
+    "category": "Drama"
+}, {
+    "imageUrl": "data/img/The Godfather.jpg",
+    "movieName": "The Godfather",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 2,
+    "viewsCount": 2576,
+    "likesCount": 186,
+    "category": "Crime"
+}, {
+    "imageUrl": "data/img/The Godfather Part II.jpg",
+    "movieName": "The Godfather: Part II",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 3,
+    "viewsCount": 2575,
+    "likesCount": 187,
+    "category": "Crime"
+}, {
+    "imageUrl": "data/img/The Dark Knight.jpg",
+    "movieName": "The Dark Knight",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 4,
+    "viewsCount": 2574,
+    "likesCount": 188,
+    "category": "Action"
+}, {
+    "imageUrl": "data/img/12 Angry Men.jpg",
+    "movieName": "12 Angry Men",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 5,
+    "viewsCount": 2573,
+    "likesCount": 189,
+    "category": "Crime"
+}, {
+    "imageUrl": "data/img/Schindlers List.jpg",
+    "movieName": "Schindler's List",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 6,
+    "viewsCount": 2572,
+    "likesCount": 190,
+    "category": "Drama"
+}, {
+    "imageUrl": "data/img/Pulp Fiction.jpg",
+    "movieName": "Pulp Fiction",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 7,
+    "viewsCount": 2571,
+    "likesCount": 191,
+    "category": "Crime"
+}, {
+    "imageUrl": "data/img/The Good the Bad and the Ugly.jpg",
+    "movieName": "The Good, the Bad and the Ugly",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 8,
+    "viewsCount": 2570,
+    "likesCount": 192,
+    "category": "Western"
+}, {
+    "imageUrl": "data/img/The Lord of the Rings The Return of the King.jpg",
+    "movieName": "The Lord of the Rings: The Return of the King",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 9,
+    "viewsCount": 2569,
+    "likesCount": 193,
+    "category": "Fantasy"
+}, {
+    "imageUrl": "data/img/Fight Club.jpg",
+    "movieName": "Fight Club",
+    "sourceLanguage": "English",
+    "targetLanguage": "Spanish",
+    "level": 10,
+    "viewsCount": 2568,
+    "likesCount": 194,
+    "category": "Drama"
+}];
 var mongodata = require('../models/mongoAPI');
 
 module.exports = function(app, passport) {
@@ -29,11 +120,23 @@ module.exports = function(app, passport) {
         // mongodata.Tester(res);
     });
 
+    app.get('/clientTester', function(req, res) {
+        res.render('client.ejs');
+        //  res.sendFile
+        // res.json(blocks);
+    });
+
     app.get('/clientcontrol', function(req, res) {
         res.render('client.ejs');
         //  res.sendFile
         // res.json(blocks);
     });
+
+
+    app.route('/rdata/movies.json')
+        .get (function(req, res) {
+            res.json(moviemock);
+        })
 
     app.route('/teacher')
         .get (function(req, res) {
