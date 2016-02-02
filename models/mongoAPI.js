@@ -288,6 +288,7 @@ function viewFiles(res) {
 
 function parseSV2x1() {
 
+
 	lan = models.Language;
 	lansData = [{symbol : 'en', name : 'English'},
 		{symbol : 'sp', name : 'Spanish'},
@@ -313,6 +314,16 @@ function parseSV2x1() {
 		lansdoc.push(lang);
 	});
 
+	var filesrtfr = fs.readFileSync('res/sv2x1.srt', "utf-8"); // spanish
+	var filesrten = fs.readFileSync('res/sv2x2.srt', "utf-8"); // english
+	var filesrtpt = fs.readFileSync('res/sv2x3.srt', "utf-8"); // portuguese
+
+	var fr = srtp.parser.fromSrt(filesrtfr, true, true);
+	var en = srtp.parser.fromSrt(filesrten, true, true);
+	var pt = srtp.parser.fromSrt(filesrtpt, true, true);
+
+	var mvsubs;
+
 	mov = models.Movie;
 	moviesData = [{name : "movie1", provider : "provider", link : "link", Img : "img", source_lan : lansdoc[0]},
 		{name : "movie2222", provider : "provider2222", link : "link222", Img : "img22", source_lan : lansdoc[0]},
@@ -325,61 +336,45 @@ function parseSV2x1() {
 		moviesDoc.push(movie);
 	});
 
-	var filesrtsp = fs.readFileSync('res/sv2x1.srt', "utf-8"); // spanish
-	var filesrten = fs.readFileSync('res/sv2x2.srt', "utf-8"); // english
-	var filesrtpt = fs.readFileSync('res/sv2x3.srt', "utf-8"); // portuguese
-
-	var sp = srtp.parser.fromSrt(filesrtsp, true, true);
-	var en = srtp.parser.fromSrt(filesrten, true, true);
-	var pt = srtp.parser.fromSrt(filesrtpt, true, true);
-
-	srtb = models.SrtBlock;
-	var mvsubs;
-	ens=[];
-	sps=[];
-	pts=[];
-
-	en.forEach(function(el) {
-		bl = new srtb(el);
-		ens[parseInt(bl.id)] = bl;
-	});
-
-	sp.forEach(function(el) {
-		sl = new srtb(el);
-		sps[parseInt(sl.id)] = sl;
-	});
-
-	pt.forEach(function(el) {
-		sl = new srtb(el);
-		pts[parseInt(sl.id)] = sl;
-	});
-
-	var dstlans = [lansdoc[1] , lansdoc[2]];
+	var dstlans = [lansdoc[7] , lansdoc[2]];
 	movieDoc = new models.Movie({name : "SV1", provider : "provider333", link : "link333", Img : "img33",
 		source_lan : lansdoc[0], dest_lans : dstlans});
+	moviesDoc.push(movieDoc);
 
-	var len = Math.max(ens.length, sps.length);
-
-	var spens = [];
-
-	for (i = 0; i < len; i++) {
-		var spen = new saysoblock;
-		spen.source_lan = ens[i];
-		spen.dest_lan_block = sps[i];
-		spen.trans_block = {};
-		spen.block_no = i;
-		spen.dest_couplings = {};
-		spen.trance_couplings = {};
-		spens.push(spen);
+	var len = Math.max(en.length, fr.length);
+	var frens = [];
+	for (i = 0; i < en.length; i++) {
+		var fren = new saysoblock;
+		fren.source_lan = en[i].text;
+		if (fr[i])
+			fren.dest_lan_text = fr[i].text;
+		else
+			fren.dest_lan_text = ""
+		fren.source_lan_text = en[i].text;
+		fren.trans_block_text = "TBD";
+		fren.startTime = en[i].startTime;
+		fren.endTime = en[i].endTime;
+		fren.trans_block = {};
+		fren.block_no = i;
+		fren.dest_couplings = {};
+		fren.trance_couplings = {};
+		frens.push(fren);
 	}
 
-	var len2 = Math.max(ens.length, pts.length);
 
+	var len2 = Math.max(en.length, pt.length);
 	var ptens = [];
-	for (i = 0; i < len2; i++) {
+	for (i = 0; i < en.length; i++) {
 		var pten = new saysoblock;
-		pten.source_lan = ens[i];
-		pten.dest_lan_block = sps[i];
+		pten.source_lan = en[i].text;
+		if (pt[i])
+			pten.dest_lan_text = pt[i].text;
+		else
+			pten.dest_lan_text = "";
+		pten.source_lan_text = en[i].text;
+		pten.trans_block_text = "TBD";
+		pten.startTime = en[i].startTime;
+		pten.endTime = en[i].endTime;
 		pten.trans_block = {};
 		pten.block_no = i;
 		pten.dest_couplings = {};
@@ -388,11 +383,10 @@ function parseSV2x1() {
 		ptens.push(pten);
 	}
 
-
-	var mvsubssp = new models.MovieSubtitles({
+	var mvsubsfr = new models.MovieSubtitles({
 		movie : movieDoc,
-		destlan : lansdoc[1],
-		subs : spens,
+		destlan : lansdoc[7],
+		subs : frens,
 	});
 
 	var mvsubspt = new models.MovieSubtitles({
@@ -400,7 +394,6 @@ function parseSV2x1() {
 		destlan : lansdoc[2],
 		subs : ptens,
 	});
-
 
 	lansdoc.forEach(function(el) {
 		el.save(function(err) {
@@ -416,51 +409,15 @@ function parseSV2x1() {
 		});
 	});
 
-	//pts.forEach(function(el) {
-	//	el.save(function(err) {
-	//		if (err) throw err;
-	//		console.log('sayso pts created! ');
-	//	});
-	//});
-    //
-	//sps.forEach(function(el) {
-	//	el.save(function(err) {
-	//		if (err) throw err;
-	//		console.log('sayso sps created! ');
-	//	});
-	//});
-    //
-	//ens.forEach(function(el) {
-	//	el.save(function(err) {
-	//		if (err) throw err;
-	//		console.log('sayso eps created! ');
-	//	});
-	//});
-    //
-	//spens.forEach(function(el) {
-	//	el.save(function (err) {
-	//		if (err) throw err;
-	//		console.log('sayso spens created! ');
-	//	});
-	//});
-    //
-	//ptens.forEach(function(el) {
-	//	el.save(function (err) {
-	//		if (err) throw err;
-	//		console.log('sayso ptens created! ');
-	//	});
-	//});
-
 	mvsubspt.save(function(err) {
 		if (err) throw err;
 		console.log('sayso mvsubspt created! ');
 	});
 
-	mvsubssp.save(function(err) {
+	mvsubsfr.save(function(err) {
 		if (err) throw err;
 		console.log('sayso mvsubssp created! ');
 	});
-	//  pts, sps, ens, spens, lansdoc, moviesDoc .save()
 
 }
 

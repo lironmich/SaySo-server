@@ -10,9 +10,9 @@ function mongoInit(){
 }
 
 // mongodb://<dbuser>:<dbpassword>@ds051625.mongolab.com:51625/sayso-dev
-mongoose.connect('mongodb://raz:razdev@ds051625.mongolab.com:51625/sayso-dev');
+// mongoose.connect('mongodb://raz:razdev@ds051625.mongolab.com:51625/sayso-dev');
 
-// mongoose.connect('mongodb://localhost/cards');
+mongoose.connect('mongodb://localhost/cards');
 
 
 
@@ -27,7 +27,7 @@ var curriculaSchema = new Schema({
 
 var subcategorySchema = new Schema({
   curricula: [curriculaSchema],
-  symbol: String, 
+  symbol: String,
 });
 
 var cardSchema = new Schema({
@@ -62,28 +62,22 @@ var movieSchema = new Schema({
   "category": String    // schema vs enum
 });
 
-var srtBlockSchema = new Schema({
-  id: String,
+var saySoBlockSchema = new Schema({
   startTime: Number, // in ms
   endTime: Number,   // in ms
-  text: String,
-});
-
-// add a virtual that returns startTime-->endTime
-srtBlockSchema.virtual('time')
-    .get( function () {
-        return this.startTime + '-->' + this.endTime;
-    });
-
-var saySoBlockSchema = new Schema({
-  source_lan : [srtBlockSchema],      // block
-  dest_lan_id : [languageSchema],
-  dest_lan_block : [srtBlockSchema],  // block
-  trans_block : [srtBlockSchema],     // block
+  source_lan_text : String,      // block
+  dest_lan_text : String,  // block
+  trans_block_text : String,     // block
   block_no : Number,
   dest_couplings  : {},
   trance_couplings  : {},
 });
+
+// add a virtual that returns startTime-->endTime
+saySoBlockSchema.virtual('time')
+    .get( function () {
+      return this.startTime + '-->' + this.endTime;
+    });
 
 var movieSubtitlesSchema = new Schema({
   movie : [movieSchema],  // TBD change from embedded document to document reference
@@ -96,15 +90,14 @@ var movieSubtitlesSchema = new Schema({
 
 var Movie = mongoose.model('Movie', movieSchema);
 var Language = mongoose.model('Language', languageSchema);
-var SrtBlock = mongoose.model('SrtBlock', srtBlockSchema);
 var SaySoBlock = mongoose.model('SaySoBlock', saySoBlockSchema);
 var MovieSubtitles = mongoose.model('MovieSubtitles', movieSubtitlesSchema);
 
 exports.Movie = Movie;
 exports.Language = Language;
-exports.SrtBlock = SrtBlock;
 exports.SaySoBlock = SaySoBlock;
 exports.MovieSubtitles = MovieSubtitles;
+
 
 // Card decks
 

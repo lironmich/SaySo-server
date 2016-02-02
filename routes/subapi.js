@@ -1,22 +1,22 @@
-
-// Mock for Dor
- sub1 = {"00:00:18,578 --> 00:00:19,963" : "first line "};
- sub2 = {"00:00:19,993 --> 00:00:21,265" : "second line"};
- sub3 = {"00:00:21,380 --> 00:00:22,903" : "third line"};
-
- he_tr_en1= {"00:00:18,578 --> 00:00:19,963" : "shura rishona"};
- he_tr_en2= {"00:00:19,993 --> 00:00:21,265" : "shura shniya"};
- he_tr_en3= {"00:00:21,380 --> 00:00:22,903" : "shura shlishit"};
-
- heb1= {"00:00:18,578 --> 00:00:19,963" : "שורה ראשונה"};
- heb2= {"00:00:19,993 --> 00:00:21,265" : "שורה שנייה"};
- heb3= {"00:00:21,380 --> 00:00:22,903" : "שורה שלישית"};
-
- blocks=[];
- blocks[0] = {'en' : sub1, 'heb' : heb1,  couplings : [ ["שורה", "line", "shura"], ["second", "ראשונה", "rishona"] ] };
- blocks[1] = {'en' : sub2, 'heb' : heb2,  couplings : [ ["שורה", "line", "shura"], ["second", "שנייה", "shniya"] ]  };
- blocks[2] = {'en' : sub3, 'heb' : heb3,  couplings : [ ["שורה", "line", "shura"], ["second", "שלישית", "shlishit"] ]  };
-
+//
+//// Mock for Dor
+// sub1 = {"00:00:18,578 --> 00:00:19,963" : "first line "};
+// sub2 = {"00:00:19,993 --> 00:00:21,265" : "second line"};
+// sub3 = {"00:00:21,380 --> 00:00:22,903" : "third line"};
+//
+// he_tr_en1= {"00:00:18,578 --> 00:00:19,963" : "shura rishona"};
+// he_tr_en2= {"00:00:19,993 --> 00:00:21,265" : "shura shniya"};
+// he_tr_en3= {"00:00:21,380 --> 00:00:22,903" : "shura shlishit"};
+//
+// heb1= {"00:00:18,578 --> 00:00:19,963" : "שורה ראשונה"};
+// heb2= {"00:00:19,993 --> 00:00:21,265" : "שורה שנייה"};
+// heb3= {"00:00:21,380 --> 00:00:22,903" : "שורה שלישית"};
+//
+// blocks=[];
+// blocks[0] = {'en' : sub1, 'heb' : heb1,  couplings : [ ["שורה", "line", "shura"], ["second", "ראשונה", "rishona"] ] };
+// blocks[1] = {'en' : sub2, 'heb' : heb2,  couplings : [ ["שורה", "line", "shura"], ["second", "שנייה", "shniya"] ]  };
+// blocks[2] = {'en' : sub3, 'heb' : heb3,  couplings : [ ["שורה", "line", "shura"], ["second", "שלישית", "shlishit"] ]  };
+//
 
 var mongodata = require('../models/mongoAPI');
 
@@ -33,7 +33,6 @@ module.exports = function(app, passport) {
         res.render('client.ejs');
         //  res.sendFile
         // res.json(blocks);
-        // mongodata.Tester(res);
     });
 
     app.route('/teacher')
@@ -56,8 +55,6 @@ module.exports = function(app, passport) {
 
 
 
-
-
     //  /dbapi/movies
     app.route('/dbapi/languages')
         .get (function(req, res) {
@@ -73,7 +70,6 @@ module.exports = function(app, passport) {
             mongodata.getMovies(req, res);
 
         })
-
 
 
     // @params
