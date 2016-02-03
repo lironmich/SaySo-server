@@ -7,11 +7,11 @@ var util = require('util');
 
 module.exports = function(app, passport) {
 
-	app.get('/', function(req, res) {
-
-		// render the page and pass in any flash data if it exists
-		res.render('GeneralPartials/index.ejs', { message: req.flash('loginMessage') });
-	});
+	//app.get('/', function(req, res) {
+    //
+	//	// render the page and pass in any flash data if it exists
+	//	//res.render('GeneralPartials/index.ejs', { message: req.flash('loginMessage') });
+	//});
 
 	app.get('/public/*', function(req, res) {
 		var path = "." + url.parse(req.url).pathname;
