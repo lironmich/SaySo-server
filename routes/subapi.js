@@ -109,6 +109,19 @@ var moviemock = [{
     "likesCount": 194,
     "category": "Drama"
 }];
+
+var subdata = [{
+    "en": {"00:00:00,000 --> 00:00:05,000" : "How do you do it?"},
+    "he_tr_en": {"00:00:00,000 --> 00:00:05,000" : "eikh ata ose et ze?"},
+    "he": {"00:00:00,000 --> 00:00:05,000" : "איך אתה עושה את זה?"},
+    "couplings": [
+        ["איך", "How", "eikh"],
+        ["אתה", "you", "ata"],
+        ["עושה", "do", "ose"],
+        ["את זה", "it", "et ze"]
+    ]
+}]
+
 var mongodata = require('../models/mongoAPI');
 
 module.exports = function(app, passport) {
@@ -126,6 +139,16 @@ module.exports = function(app, passport) {
         // res.json(blocks);
     });
 
+    app.route('/rdata/movies')
+        .get (function(req, res) {
+            res.json(moviemock);
+        })
+
+    app.route('/rdata/subtitle')
+        .get (function(req, res) {
+            res.json(subdata);
+        })
+
     app.get('/clientcontrol', function(req, res) {
         res.render('client.ejs');
         //  res.sendFile
@@ -133,10 +156,6 @@ module.exports = function(app, passport) {
     });
 
 
-    app.route('/rdata/movies.json')
-        .get (function(req, res) {
-            res.json(moviemock);
-        })
 
     app.route('/teacher')
         .get (function(req, res) {
