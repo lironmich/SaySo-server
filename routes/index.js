@@ -28,6 +28,10 @@ module.exports = function(app, passport) {
 		RequestHandler.defaultHandler(res, path);
 	});
 
+	app.get('/favicon.ico', function(req, res) {
+		res.sendfile('./public/favicon.ico');
+	});
+
 	app.get('/controllers/*', function(req, res) {
 		var path = "." + url.parse(req.url).pathname;
 		RequestHandler.defaultHandler(res, path);

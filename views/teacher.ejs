@@ -18,40 +18,13 @@
     <script src="/node_modules/angular-resource/angular-resource.min.js"></script>
 
     <script src="/public/apps/SaySo-teacher/js/app.js"></script>
-    <script src="/public/apps/SaySo-teacher/js/controllers/teacerInt.js"></script>
-
+    <script src="/public/apps/SaySo-teacher/js/controllers/movielist.js"></script>
+    <script src="/public/apps/SaySo-teacher/js/controllers/langlist.js"></script>
+    <script src="/public/apps/SaySo-teacher/js/controllers/movieedit.js"></script>
+    <script src="/public/apps/SaySo-teacher/js/controllers/teacherMain.js"></script>
 </head>
 <body>
-<p></p>
-<div class="container">
-
-    <input ng-model="test"></input>
-    {{test}}
-
-    <div class="container" ng-controller="movieTableManage">
-        <h1>Movie list</h1>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Provider</th>
-                <th>Link</th>
-                <th>source_lan</th>
-                <th>dest_lans</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="movie in movielist">
-                <td>{{movie.name}}</td>
-                <td>{{movie.provider}}</td>
-                <td>{{movie.link}}</td>
-                <td>{{movie.source_lan}}</td>
-                <td>{{movie.dest_lans}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+<ng-view></ng-view>
 </body>
 </html>
 

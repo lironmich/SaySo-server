@@ -1,4 +1,4 @@
-//
+
 //// Mock for Dor
 // sub1 = {"00:00:18,578 --> 00:00:19,963" : "first line "};
 // sub2 = {"00:00:19,993 --> 00:00:21,265" : "second line"};
@@ -174,8 +174,6 @@ module.exports = function(app, passport) {
         mongodata.clipList(res);
     });
 
-
-
     //  /dbapi/movies
     app.route('/dbapi/languages')
         .get (function(req, res) {
@@ -189,7 +187,6 @@ module.exports = function(app, passport) {
         .get (function(req, res) {
             // params category, source_language, dest_language
             mongodata.getMovies(req, res);
-
         })
 
 
