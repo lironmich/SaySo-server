@@ -156,7 +156,6 @@ module.exports = function(app, passport) {
     });
 
 
-
     app.route('/teacher')
         .get (function(req, res) {
             res.render('teacher.ejs');

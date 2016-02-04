@@ -14,8 +14,6 @@ mongoose.connect('mongodb://raz:razdev@ds051625.mongolab.com:51625/sayso-dev');
 
 // mongoose.connect('mongodb://localhost/cards');
 
-
-
 var Schema = mongoose.Schema;
 
 // Cards
