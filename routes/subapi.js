@@ -127,7 +127,7 @@ var mongodata = require('../models/mongoAPI');
 module.exports = function(app, passport) {
 
 
-    app.get('/tester', function(req, res) {
+    app.get('/cards', function(req, res) {
         res.render('cards.ejs');
         // res.json(blocks);
         // mongodata.Tester(res);

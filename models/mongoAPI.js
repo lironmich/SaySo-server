@@ -244,14 +244,13 @@ function InitDBMocks(res) {
 
 function getMovieSub(req, res) {
 
-	lan_code = req.query.lancode || 'sp';
+	lan_code = req.query.lancode || 'fr';
 	movie_id = req.params.id; // original movie_id + lancode = subtitle_movie_schema
 	start_time = req.query.start_time || 0;
 	end_time = req.query.end_time || 4*60*100;
 
 	// , startTime : start_time, endtTime : end_time
-	moviesubtitles.find({'destlan.symbol' : lan_code,
-						 'subs.source_lan.startTime' : { $gt : start_time, $lt : end_time}  }, function(err, sub) {
+	moviesubtitles.find({'destlan.symbol' : lan_code}, function(err, sub) {
 		if (err) res.json.reject(err)
 	}).then(function(sub){
 		res.json(sub);
