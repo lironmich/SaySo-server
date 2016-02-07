@@ -3,7 +3,7 @@ var fs = require ("fs"); // remove me
 
 var srtp = require('../libs/srtparser.js');
 
-var Q = require('q');
+// var Q = require('q');
 var mongoose = require('mongoose');
 
 var curricula = models.Curricula;
@@ -13,7 +13,7 @@ var face = {};
 
 var movie = models.Movie;
 var language = models.Language;
-var srtblock = models.SrtBlock;
+//var srtblock = models.SrtBlock;
 var saysoblock = models.SaySoBlock;
 var moviesubtitles = models.MovieSubtitles;
 
@@ -21,26 +21,32 @@ var moviesubtitles = models.MovieSubtitles;
 // get cards by curriculas
 function curriculasList(res){
 
-	var getCuriculas = function (){
-		var deferred = Q.defer();
-		curricula.find({}, function(err, curics){
-			if (err) {deferred.reject(err)}
-			else{
-				deferred.resolve( curics);
-			}
-		})
+	curricula.find({}, function(err, cat){
+		if (err) res.json.reject(err)
+	}).then(function(cat){
+		res.json(cat);
+	});
 
-		return deferred.promise;
-	};
-
-	getCuriculas()
-			.then(function(data){
-				console.log(data);
-				res.json(data);
-			})
-			.catch(function(error){
-				res.json(error);
-			});
+	//var getCuriculas = function (){
+	//	var deferred = Q.defer();
+	//	curricula.find({}, function(err, curics){
+	//		if (err) {deferred.reject(err)}
+	//		else{
+	//			deferred.resolve( curics);
+	//		}
+	//	})
+    //
+	//	return deferred.promise;
+	//};
+    //
+	//getCuriculas()
+	//		.then(function(data){
+	//			console.log(data);
+	//			res.json(data);
+	//		})
+	//		.catch(function(error){
+	//			res.json(error);
+	//		});
 }
 
 // get cards by Subcategory
@@ -48,52 +54,64 @@ function curriculasList(res){
 // get all categorys
 function categorysList(res){
 
-	var getCategorys = function (){
-		var deferred = Q.defer();
-		category.find({}, function(err, categ){
-			if (err) {deferred.reject(err)}
-			else{
-				deferred.resolve( categ);
-			}
-		})
+	category.find({}, function(err, cat){
+		if (err) res.json.reject(err)
+	}).then(function(cat){
+		res.json(cat);
+	});
 
-		return deferred.promise;
-	};
-
-	getCategorys()
-			.then(function(data){
-				// console.log(data);
-				res.json(data);
-			})
-			.catch(function(error){
-				res.json(error);
-			});
+	//var getCategorys = function (){
+	//	var deferred = Q.defer();
+	//	category.find({}, function(err, categ){
+	//		if (err) {deferred.reject(err)}
+	//		else{
+	//			deferred.resolve( categ);
+	//		}
+	//	})
+    //
+	//	return deferred.promise;
+	//};
+    //
+	//getCategorys()
+	//		.then(function(data){
+	//			// console.log(data);
+	//			res.json(data);
+	//		})
+	//		.catch(function(error){
+	//			res.json(error);
+	//		});
 }
 
 // get all cards
 function cardsList(res){
 
-	var getCards = function (){
-		var deferred = Q.defer();
-		card.find({}, function(err, car){
-			if (err) {deferred.reject(err)}
-			else{
-				deferred.resolve( car);
-			}
-		})
+	card.find({}, function(err, car){
+		if (err) res.json.reject(err)
+	}).then(function(car){
+		res.json(car);
+	});
 
-		return deferred.promise;
-	};
-
-	getCards()
-			.then(function(data){
-				// console.log(data);
-				res.json(data);
-			})
-			.catch(function(error){
-				// console.log(error);
-				res.json(error);
-			});
+	//var getCards = function (){
+	//	var deferred = Q.defer();
+	//	card.find({}, function(err, car){
+	//		if (err) {deferred.reject(err)}
+	//		else{
+	//			deferred.resolve( car);
+	//		}
+	//	})
+    //
+	//	return deferred.promise;
+	//};
+    //
+	//getCards()
+	//		.then(function(data){
+	//			// console.log(data);
+	//			res.json(data);
+	//		})
+	//		.catch(function(error){
+	//			// console.log(error);
+	//			res.json(error);
+	//		});
 }
 
 // find card id by name
@@ -101,27 +119,34 @@ function cardsList(res){
 // get card by id
 function cardsById(res, id){
 	var oid = mongoose.Types.ObjectId(id)
-	var getCards = function (){
-		var deferred = Q.defer();
-		card.find({"_id": oid }, function(err, car){
-			if (err) {deferred.reject(err)}
-			else{
-				deferred.resolve( car);
-			}
-		})
 
-		return deferred.promise;
-	};
+	card.find({"_id": oid }, function(err, car){
+		if (err) res.json.reject(err)
+	}).then(function(car){
+		res.json(car);
+	});
 
-	getCards()
-			.then(function(data){
-				// console.log(data);
-				res.json(data);
-			})
-			.catch(function(error){
-				// console.log(error);
-				res.json(error);
-			});
+	//var getCards = function (){
+	//	var deferred = Q.defer();
+	//	card.find({"_id": oid }, function(err, car){
+	//		if (err) {deferred.reject(err)}
+	//		else{
+	//			deferred.resolve( car);
+	//		}
+	//	})
+    //
+	//	return deferred.promise;
+	//};
+    //
+	//getCards()
+	//		.then(function(data){
+	//			// console.log(data);
+	//			res.json(data);
+	//		})
+	//		.catch(function(error){
+	//			// console.log(error);
+	//			res.json(error);
+	//		});
 }
 
 // find category id by name
@@ -130,54 +155,66 @@ function cardsById(res, id){
 function cardsByCategory(res, id){
 	var oid = mongoose.Types.ObjectId(id);
 
-	var getCards = function (){
-		var deferred = Q.defer();
-		card.find({"subcategory._id": oid }, function(err, car){
-			if (err) {deferred.reject(err)}
-			else{
-				deferred.resolve( car);
-			}
-		})
+	card.find({"subcategory._id": oid}, function(err, car){
+		if (err) res.json.reject(err)
+	}).then(function(car){
+		res.json(car);
+	});
 
-		return deferred.promise;
-	};
-
-	getCards()
-			.then(function(data){
-				// console.log(data);
-				res.json(data);
-			})
-			.catch(function(error){
-				// console.log(error);
-				res.json(error);
-			});
+	//var getCards = function (){
+	//	var deferred = Q.defer();
+	//	card.find({"subcategory._id": oid }, function(err, car){
+	//		if (err) {deferred.reject(err)}
+	//		else{
+	//			deferred.resolve( car);
+	//		}
+	//	})
+    //
+	//	return deferred.promise;
+	//};
+    //
+	//getCards()
+	//		.then(function(data){
+	//			// console.log(data);
+	//			res.json(data);
+	//		})
+	//		.catch(function(error){
+	//			// console.log(error);
+	//			res.json(error);
+	//		});
 }
 
 // get categorys by curicula
 function categorysByCurricula(res, id){
 
 	var oid = mongoose.Types.ObjectId(id)
-	var getCards = function (){
-		var deferred = Q.defer();
-		category.find({"curricula._id": oid}, function(err, car){
-			if (err) {deferred.reject(err)}
-			else{
-				deferred.resolve( car);
-			}
-		})
+	//var getCards = function (){
+	//	var deferred = Q.defer();
+	category.find({"curricula._id": oid}, function(err, car){
+		if (err) res.json.reject(err)
+	}).then(function(car){
+		res.json(car);
+	});
 
-		return deferred.promise;
-	};
+		// })
+		//return deferred.promise;
+	// };
 
-	getCards()
-			.then(function(data){
-				// console.log(data);
-				res.json(data);
-			})
-			.catch(function(error){
-				// console.log(error);
-				res.json(error);
-			});
+	//getCards()
+	//		.then(function(data){
+	//			// console.log(data);
+	//			res.json(data);
+	//		})
+	//		.catch(function(error){
+	//			// console.log(error);
+	//			res.json(error);
+	//		});
+    //
+	//moviesubtitles.find({'destlan.symbol' : lan_code}, function(err, sub) {
+	//	if (err) res.json.reject(err)
+	//}).then(function(sub){
+	//	res.json(sub);
+	//});
 }
 
 

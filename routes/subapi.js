@@ -170,6 +170,7 @@ module.exports = function(app, passport) {
     app.get('/parsesrtmock', function(req, res) {
         mongodata.InitDBMocks(res);
     });
+
     app.get('/cliplist', function(req, res) {
         mongodata.clipList(res);
     });

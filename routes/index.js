@@ -47,7 +47,6 @@ module.exports = function(app, passport) {
 		RequestHandler.defaultHandler(res, path);
 	});
 
-
 	// cards mongo API
 
 	app.get('/api/listcurriculums', function(req, res) { // New Mongo ??
@@ -72,13 +71,13 @@ module.exports = function(app, passport) {
 		.get(function(req, res) {
 			mongodata.cardsByCategory(res, req.params.categoryid);
 			console.log ('/api/cards/category:categoryid req.params.categoryid  ' + req.params.categoryid);
-			})
+		})
 
 	app.route('/api/cards/card:cardid')
 		.get(function(req, res) {
 			mongodata.cardsById(res, req.params.cardid);
 			console.log ('/api/cards/card:cardid : req.params.cardid  ' + req.params.cardid);
-			})
+		})
 
 	function oldCard() {
 		//app.get('/nextcard', function(req, res) {
