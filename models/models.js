@@ -9,8 +9,8 @@ function mongoInit(){
   });
 }
 
-// mongodb://<dbuser>:<dbpassword>@ds051625.mongolab.com:51625/sayso-dev
-mongoose.connect('mongodb://raz:razdev@ds051625.mongolab.com:51625/sayso-dev');
+// mongodb://<dbuser>:<dbpassword>@ds061405.mongolab.com:61405/sayso-dev
+mongoose.connect('mongodb://lironmich:123456@ds061405.mongolab.com:61405/sayso-dev');
 
 
 
