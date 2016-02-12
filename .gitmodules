@@ -1,9 +1,6 @@
 [submodule "public/apps/SaySo-client"]
 	path = public/apps/SaySo-client
 	url = https://sayso-helper:q1w2e3r4@github.com/lironmich/SaySo-client.git
-[submodule "public/apps/flashCards-client"]
-	path = public/apps/flashCards-client
-	url = https://github.com/lironmich/flashCards-client.git
 [submodule "public/apps/SaySo-teacher"]
 	path = public/apps/SaySo-teacher
 	url = https://sayso-helper:q1w2e3r4@github.com/lironmich/SaySo-teacher.git
