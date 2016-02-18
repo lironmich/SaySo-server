@@ -19,7 +19,7 @@
 //
 
 var moviemock = [{
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/The_Shawshank_Redemption.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/The_Shawshank_Redemption.jpg",
     "movieName": "The Shawshank Redemption",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -28,7 +28,7 @@ var moviemock = [{
     "likesCount": 185,
     "category": "Drama"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/The_Godfather.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/The_Godfather.jpg",
     "movieName": "The Godfather",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -37,7 +37,7 @@ var moviemock = [{
     "likesCount": 186,
     "category": "Crime"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/The_Godfather_Part_II.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/The_Godfather_Part_II.jpg",
     "movieName": "The Godfather: Part II",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -46,7 +46,7 @@ var moviemock = [{
     "likesCount": 187,
     "category": "Crime"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/The_Dark_Knight.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/The_Dark_Knight.jpg",
     "movieName": "The Dark Knight",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -55,7 +55,7 @@ var moviemock = [{
     "likesCount": 188,
     "category": "Action"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/12_Angry_Men.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/12_Angry_Men.jpg",
     "movieName": "12 Angry Men",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -64,7 +64,7 @@ var moviemock = [{
     "likesCount": 189,
     "category": "Crime"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/Schindlers_List.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/Schindlers_List.jpg",
     "movieName": "Schindler's List",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -73,7 +73,7 @@ var moviemock = [{
     "likesCount": 190,
     "category": "Drama"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/Pulp_Fiction.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/Pulp_Fiction.jpg",
     "movieName": "Pulp Fiction",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -82,7 +82,7 @@ var moviemock = [{
     "likesCount": 191,
     "category": "Crime"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/The_Good_the_Bad_and_the_Ugly.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/The_Good_the_Bad_and_the_Ugly.jpg",
     "movieName": "The Good, the Bad and the Ugly",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -91,7 +91,7 @@ var moviemock = [{
     "likesCount": 192,
     "category": "Western"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/The_Lord_of_the_Rings_The_Return_of_the_King.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/The_Lord_of_the_Rings_The_Return_of_the_King.jpg",
     "movieName": "The Lord of the Rings: The Return of the King",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -100,7 +100,7 @@ var moviemock = [{
     "likesCount": 193,
     "category": "Fantasy"
 }, {
-    "imageUrl": "http://127.0.0.1:8888/public/apps/SaySo-client/freelancer-mobile/data/img/Fight_Club.jpg",
+    "imageUrl": "public/apps/SaySo-client/sayso-client/data/img/Fight_Club.jpg",
     "movieName": "Fight Club",
     "sourceLanguage": "English",
     "targetLanguage": "Spanish",
@@ -202,7 +202,7 @@ module.exports = function(app, passport) {
         // .put .delete .update
 
 
-    //  http://127.0.0.1:8888/teacher/movie/2424?lan1=he&lan2=en&lan3=tr
+    //  teacher/movie/2424?lan1=he&lan2=en&lan3=tr
     app.route('/teacher/movie/:movie_id')
 
         .get(function(req, res) {
